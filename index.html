@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clinical Anatomy Exam 4</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI',
+          'Ubuntu', 'Droid Sans', sans-serif, 'Meiryo';
+        padding: 0 12px;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin-bottom: 24px;
+        width: 100%;
+      }
+      table > thead > tr > th,
+      table > tbody > tr > td {
+        padding: 5px 10px;
+      }
+      table > thead > tr > th {
+        text-align: left;
+        border-bottom: 1px solid;
+      }
+      table > tbody > tr + tr > td {
+        border-top: 1px solid;
+      }
+
+      .tooltip {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .tooltip img {
+        display: none;
+        position: absolute;
+        width: var(--tooltip-img-width, 300px);
+        height: auto;
+        border: 2px solid #f00;
+        background: #ffffcc;
+        padding: 5px;
+        z-index: 10;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(10px);
+        max-width: 90vw; /* ✅ prevents image from exceeding viewport width */
+        max-height: 80vh; /* ✅ keeps image inside visible page vertically */
+        object-fit: contain;
+        box-sizing: border-box;
+      }
+
+      .tooltip[data-position='below'] img {
+        bottom: auto;
+        top: 100%;
+      }
+
+      .tooltip:hover img {
+        display: block;
+        /* Reposition if too close to top or bottom of viewport */
+        top: auto;
+        bottom: auto;
+      }
+
+      .blurred {
+        filter: blur(3px);
+        transition: filter 0.3s ease;
+      }
+
+      table td:not(:first-child),
+      table td li {
+        cursor: pointer;
+      }
+
+      summary {
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 16px 0;
+      }
+
+      details {
+        border: 2px solid #444;
+        border-radius: 8px;
+        padding: 10px;
+        background: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blur-buttons">
+      <button id="blurAll">Blur All</button>
+      <button id="unblurAll">Unblur All</button>
+    </div>
+    <!-- Lecture 3 -->
+    <details>
+      <summary>Lecture 3: Local Anesthetics</summary>
+      <table>
+        <thead>
+          <tr>
+            <th>Drug</th>
+            <th style="text-align: right">Class</th>
+            <th>Onset</th>
+            <th>Duration</th>
+            <th>Metabolism / Notes</th>
+            <th>Max dose (per appointment)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lidocaine</strong></td>
+            <td style="text-align: right">Amide</td>
+            <td>3–5 min</td>
+            <td>Moderate (prolonged with epinephrine)</td>
+            <td>
+              <li>Metabolized in liver by microsomal CYP‑450</li>
+              <li>Active metabolites M.E.G.X. and G.X.</li>
+              <li>Vasodilator (use with epinephrine)</li>
+            </td>
+            <td>500 mg</td>
+          </tr>
+          <tr>
+            <td><strong>Mepivacaine</strong></td>
+            <td style="text-align: right">Amide</td>
+            <td>3–5 min</td>
+            <td>Short (~20 min without vasoconstrictor)</td>
+            <td>
+              <li>Metabolized in liver by CYP‑450 (like lidocaine)</li>
+              <li>
+                Slight intrinsic vasoconstriction — may be used without
+                epinephrine
+              </li>
+            </td>
+            <td>400 mg</td>
+          </tr>
+          <tr>
+            <td><strong>Prilocaine</strong></td>
+            <td style="text-align: right">Amide</td>
+            <td>3–5 min</td>
+            <td>10 min (no vasoconstrictor) → up to ~90 min (with VC)</td>
+            <td>
+              <li>Metabolized in liver and kidneys via amidases</li>
+              <li>
+                Produces ortho‑toluidine (risk of methemoglobinemia, esp. G6PD)
+              </li>
+            </td>
+            <td>600 mg</td>
+          </tr>
+          <tr>
+            <td><strong>Articaine (Septocaine®)</strong></td>
+            <td style="text-align: right">Amide (contains ester group)</td>
+            <td>1–6 min</td>
+            <td>
+              <li>Moderate</li>
+              <li>Rapid clearance (t½ ≈ 20 min)</li>
+            </td>
+            <td>
+              <li>
+                Metabolized mainly in blood by plasma carboxyesterase and to
+                lesser extent in liver (CYP) — suitable in renal dysfunction
+              </li>
+              <li>Contains both ester &amp; amide moieties</li>
+            </td>
+            <td>No absolute max (limited by epinephrine)</td>
+          </tr>
+          <tr>
+            <td><strong>Bupivacaine (Marcaine®)</strong></td>
+            <td style="text-align: right">Amide</td>
+            <td>2–10 min</td>
+            <td>Long (≈ 90–180 min)</td>
+            <td>
+              <li>Metabolized in liver by amidases to inactive metabolites</li>
+              <li>High vasodilator activity (often paired with epinephrine)</li>
+            </td>
+            <td>90 mg</td>
+          </tr>
+          <tr>
+            <td><strong>Benzocaine</strong></td>
+            <td style="text-align: right">Ester (topical)</td>
+            <td>Topical, rapid</td>
+            <td>—</td>
+            <td>
+              <li>Ester metabolized by plasma pseudocholinesterase</li>
+              <li>
+                Low systemic absorption in topical gels (20% benzocaine
+                examples)
+              </li>
+            </td>
+            <td>— [topical product doses vary]</td>
+          </tr>
+          <tr>
+            <td><strong>Procaine (Novocain®)</strong></td>
+            <td style="text-align: right">Ester</td>
+            <td>6–10 min</td>
+            <td>15–60 min</td>
+            <td>
+              <li>Ester (pseudocholinesterase metabolism)</li>
+              <li>Significant vasodilation</li>
+              <li>Highly allergenic (PABA)</li>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Chloroprocaine (Nesacaine®)</strong></td>
+            <td style="text-align: right">Ester</td>
+            <td>5–15 min</td>
+            <td>30–90 min</td>
+            <td>
+              <li>Rapidly metabolized by plasma esterases</li>
+              <li>Used epidurally (e.g., obstetrics)</li>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Tetracaine</strong></td>
+            <td style="text-align: right">Ester</td>
+            <td>Short onset</td>
+            <td>Longer duration (high potency)</td>
+            <td>
+              Ester class (plasma metabolism, PABA risk) — often used in spinal
+              anesthesia
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Epinephrine</strong> (vasoconstrictor)</td>
+            <td style="text-align: right">Adrenergic agonist</td>
+            <td>N/A</td>
+            <td>
+              <li>Prolongs LA duration</li>
+              <li>Hemostatic agent at high conc.</li>
+            </td>
+            <td>
+              <li>Acts on α and β receptors</li>
+              <li>Stimulates CV system</li>
+              <li>Overdose → CNS/cardiac stimulation</li>
+              <li>Interacts with TCAs and nonselective β‑blockers</li>
+              <li>
+                Max total epinephrine healthy = 0.2 mg, severe CVD = 0.04 mg
+              </li>
+            </td>
+            <td>Dose limit: 0.2 mg (healthy) / 0.04 mg (ASA III–IV)</td>
+          </tr>
+          <tr>
+            <td><strong>Levonordefrin</strong></td>
+            <td style="text-align: right">Synthetic vasoconstrictor</td>
+            <td>N/A</td>
+            <td>Prolongs LA (used mainly with mepivacaine)</td>
+            <td>
+              <li>Mainly α2‑agonist</li>
+              <li>Less cardiac/CNS stimulation than epi</li>
+              <li>Combined with mepivacaine 1:20,000</li>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>Phentolamine Mesylate (OraVerse)</strong></td>
+            <td style="text-align: right">
+              Alpha‑adrenergic antagonist (LA reversal)
+            </td>
+            <td>N/A</td>
+            <td>Reverses soft‑tissue anesthesia (shortens duration)</td>
+            <td>
+              <li>Dispensed 0.4 mg / 1.7 mL cartridge</li>
+              <li>Given 1:1 ratio (reversal : used LA)</li>
+              <li>Side effects — injection pain, CVS effects, headache</li>
+            </td>
+            <td>Use as indicated (product dosing)</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <style>
+      /* same as before */
+      .blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+
+      /* Make clickable cursor for td */
+      table td:not(:first-child) {
+        cursor: pointer;
+      }
+
+      /* li inside blurred td will inherit blur from parent */
+      table td.blurred li {
+        filter: inherit;
+      }
+
+      .blur-buttons {
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .blur-buttons button {
+        margin: 0 5px;
+        padding: 5px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .blur-section li {
+        cursor: pointer;
+        margin-bottom: 6px;
+      }
+
+      /* Blur effect same as td */
+      .blur-section li.blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+
+      /* Override for bold text so it always stays clear */
+      .blur-section li.blurred b {
+        filter: none !important;
+      }
+
+      .blur-section .blur-target {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .blurred {
+        filter: blur(10px);
+        transition: filter 0.3s ease;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Select table cells + blur-target spans
+        const blurCells = document.querySelectorAll(
+          'table td:not(:first-child), .blur-section .blur-target'
+        );
+
+        blurCells.forEach((cell) => {
+          cell.addEventListener('click', () => {
+            cell.classList.toggle('blurred');
+          });
+        });
+
+        // Keyboard shortcut (space toggles all)
+        document.addEventListener('keydown', (event) => {
+          if (event.code === 'Space') {
+            const allBlurred = Array.from(blurCells).every((cell) =>
+              cell.classList.contains('blurred')
+            );
+            if (allBlurred) {
+              blurCells.forEach((cell) => cell.classList.remove('blurred'));
+            } else {
+              blurCells.forEach((cell) => cell.classList.add('blurred'));
+            }
+            event.preventDefault();
+          }
+        });
+
+        // Buttons
+        document.getElementById('blurAll').addEventListener('click', () => {
+          blurCells.forEach((cell) => cell.classList.add('blurred'));
+        });
+        document.getElementById('unblurAll').addEventListener('click', () => {
+          blurCells.forEach((cell) => cell.classList.remove('blurred'));
+        });
+      });
+    </script>
+  </body>
+</html>
