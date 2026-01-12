@@ -89,1529 +89,1560 @@
     </style>
   </head>
   <body>
-    <div class="blur-buttons">
-      <button id="blurAll">Blur All</button>
-      <button id="unblurAll">Unblur All</button>
-    </div>
-    <!-- Lecture 3 -->
-    <details>
-      <summary>Lecture 3: Local Anesthetics</summary>
-      <my-header>Ester Local Anesthetics</my-header>
-      <table>
-        <thead>
-          <tr>
-            <th>Drug</th>
-            <th>Class</th>
-            <th>Onset</th>
-            <th>Duration</th>
-            <th>Metabolism / Notes</th>
-            <th>Max dose (per appointment)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Benzocaine</strong> (topical)</td>
-            <td>Ester (topical)</td>
-            <td>Topical, rapid</td>
-            <td>&mdash;</td>
-            <td>
-              <ul>
-                <li>Ester metabolized by plasma pseudocholinesterase</li>
-                <li>
-                  Low systemic absorption in topical gels (20% benzocaine
-                  examples)
-                </li>
-              </ul>
-            </td>
-            <td>&mdash; [topical product doses vary]</td>
-          </tr>
-          <tr>
-            <td><strong>Procaine (Novocain&reg;)</strong></td>
-            <td>Ester</td>
-            <td>6–10 min</td>
-            <td>15–60 min</td>
-            <td>
-              <ul>
-                <li>Ester (pseudocholinesterase metabolism)</li>
-                <li>Significant vasodilation</li>
-                <li>Highly allergenic (PABA)</li>
-              </ul>
-            </td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td><strong>Chloroprocaine (Nesacaine&reg;)</strong></td>
-            <td>Ester</td>
-            <td>5–15 min</td>
-            <td>30–90 min</td>
-            <td>
-              <ul>
-                <li>Rapidly metabolized by plasma esterases</li>
-                <li>Used epidurally (e.g., obstetrics)</li>
-                <li>Used for pregnancy to manage delivery</li>
-              </ul>
-            </td>
-            <td>&mdash;</td>
-          </tr>
-          <tr>
-            <td><strong>Tetracaine</strong></td>
-            <td>Ester</td>
-            <td>Short onset</td>
-            <td>Longer duration (high potency)</td>
-            <td>
-              Ester class (plasma metabolism, PABA risk) &mdash; often used in
-              spinal anesthesia
-            </td>
-            <td>&mdash;</td>
-          </tr>
-        </tbody>
-      </table>
-      <my-header>Amide Local Anesthetics</my-header>
-      <table>
-        <thead>
-          <tr>
-            <th>Drug</th>
-            <th>Class</th>
-            <th>Onset</th>
-            <th>Duration</th>
-            <th>Metabolism / Notes</th>
-            <th>Max dose (per appointment)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Lidocaine</strong></td>
-            <td>Amide</td>
-            <td>3–5 min</td>
-            <td>Moderate (prolonged with epinephrine)</td>
-            <td>
-              <ul>
-                <li>Metabolized in liver by microsomal CYP‑450</li>
-                <li>Active metabolites M.E.G.X. and G.X.</li>
-                <li>Vasodilator (use with epinephrine), so risk of bleeding</li>
-                <li>2% lidocaine used with epinephrine as a vasoconstrictor</li>
-              </ul>
-            </td>
-            <td>500 mg</td>
-          </tr>
-          <tr>
-            <td><strong>Mepivacaine</strong></td>
-            <td>Amide</td>
-            <td>3–5 min</td>
-            <td>Short (~20 min without vasoconstrictor)</td>
-            <td>
-              <ul>
-                <li>Metabolized in liver by CYP‑450 (like lidocaine)</li>
-                <li>
-                  Slight intrinsic vasoconstriction — may be used without
-                  epinephrine
-                </li>
-              </ul>
-            </td>
-            <td>400 mg</td>
-          </tr>
-          <tr>
-            <td><strong>Prilocaine Hydrochloride (Citanest&reg;)</strong></td>
-            <td>Amide</td>
-            <td>3–5 min</td>
-            <td>10 min (no vasoconstrictor) → up to ~90 min (with VC)</td>
-            <td>
-              <ul>
-                <li>Metabolized in liver and kidneys via amidases</li>
-                <li>
-                  Produces ortho‑toluidine (risk of methemoglobinemia, esp.
-                  G6PD)
-                </li>
-                <li>Hepatic and renal dysfunction can alter its kinetics</li>
-                <strong>Precautions:</strong>
+    <h2>Protected Content</h2>
+    <p>Please enter the password to view the content:</p>
+    <input type="password" id="password" placeholder="Enter password" />
+    <button onclick="checkPassword()">Submit</button>
+    <div id="content" style="display: none; margin-top: 20px">
+      <div class="blur-buttons">
+        <button id="blurAll">Blur All</button>
+        <button id="unblurAll">Unblur All</button>
+      </div>
+      <!-- Center a div -->
+      <div style="display: flex; justify-content: center; align-items: center">
+        Nathan Hoang's Pharm Table
+      </div>
+      <br />
+      <!-- Lecture 3 -->
+      <details>
+        <summary>Lecture 3: Local Anesthetics</summary>
+        <my-header>Ester Local Anesthetics</my-header>
+        <table>
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Onset</th>
+              <th>Duration</th>
+              <th>Metabolism / Notes</th>
+              <th>Max dose (per appointment)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Benzocaine</strong> (topical)</td>
+              <td>Ester (topical)</td>
+              <td>Topical, rapid</td>
+              <td>&mdash;</td>
+              <td>
                 <ul>
+                  <li>Ester metabolized by plasma pseudocholinesterase</li>
                   <li>
-                    Metabolized in both liver and kidney and small degree in
-                    lungs yielding various metabolites
-                  </li>
-                  <li>
-                    Ortho-toluidine may cause methemoglobinemia (especially in
-                    G6PD deficiency)
+                    Low systemic absorption in topical gels (20% benzocaine
+                    examples)
                   </li>
                 </ul>
-              </ul>
-            </td>
-            <td>600 mg</td>
-          </tr>
-          <tr>
-            <td><strong>Articaine (Septocaine&reg;)</strong></td>
-            <td>Amide (contains ester group)</td>
-            <td>1–6 min</td>
-            <td>
-              <ul>
-                <li>Moderate</li>
-                <li>Rapid clearance (t&frac12; &approx; 20 min)</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
+              </td>
+              <td>&mdash; [topical product doses vary]</td>
+            </tr>
+            <tr>
+              <td><strong>Procaine (Novocain&reg;)</strong></td>
+              <td>Ester</td>
+              <td>6–10 min</td>
+              <td>15–60 min</td>
+              <td>
+                <ul>
+                  <li>Ester (pseudocholinesterase metabolism)</li>
+                  <li>Significant vasodilation</li>
+                  <li>Highly allergenic (PABA)</li>
+                </ul>
+              </td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td><strong>Chloroprocaine (Nesacaine&reg;)</strong></td>
+              <td>Ester</td>
+              <td>5–15 min</td>
+              <td>30–90 min</td>
+              <td>
+                <ul>
+                  <li>Rapidly metabolized by plasma esterases</li>
+                  <li>Used epidurally (e.g., obstetrics)</li>
+                  <li>Used for pregnancy to manage delivery</li>
+                </ul>
+              </td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td><strong>Tetracaine</strong></td>
+              <td>Ester</td>
+              <td>Short onset</td>
+              <td>Longer duration (high potency)</td>
+              <td>
+                Ester class (plasma metabolism, PABA risk) &mdash; often used in
+                spinal anesthesia
+              </td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+        <my-header>Amide Local Anesthetics</my-header>
+        <table>
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Onset</th>
+              <th>Duration</th>
+              <th>Metabolism / Notes</th>
+              <th>Max dose (per appointment)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lidocaine</strong></td>
+              <td>Amide</td>
+              <td>3–5 min</td>
+              <td>Moderate (prolonged with epinephrine)</td>
+              <td>
+                <ul>
+                  <li>Metabolized in liver by microsomal CYP‑450</li>
+                  <li>Active metabolites M.E.G.X. and G.X.</li>
+                  <li>
+                    Vasodilator (use with epinephrine), so risk of bleeding
+                  </li>
+                  <li>
+                    2% lidocaine used with epinephrine as a vasoconstrictor
+                  </li>
+                </ul>
+              </td>
+              <td>500 mg</td>
+            </tr>
+            <tr>
+              <td><strong>Mepivacaine</strong></td>
+              <td>Amide</td>
+              <td>3–5 min</td>
+              <td>Short (~20 min without vasoconstrictor)</td>
+              <td>
+                <ul>
+                  <li>Metabolized in liver by CYP‑450 (like lidocaine)</li>
+                  <li>
+                    Slight intrinsic vasoconstriction — may be used without
+                    epinephrine
+                  </li>
+                </ul>
+              </td>
+              <td>400 mg</td>
+            </tr>
+            <tr>
+              <td><strong>Prilocaine Hydrochloride (Citanest&reg;)</strong></td>
+              <td>Amide</td>
+              <td>3–5 min</td>
+              <td>10 min (no vasoconstrictor) → up to ~90 min (with VC)</td>
+              <td>
+                <ul>
+                  <li>Metabolized in liver and kidneys via amidases</li>
+                  <li>
+                    Produces ortho‑toluidine (risk of methemoglobinemia, esp.
+                    G6PD)
+                  </li>
+                  <li>Hepatic and renal dysfunction can alter its kinetics</li>
+                  <strong>Precautions:</strong>
+                  <ul>
+                    <li>
+                      Metabolized in both liver and kidney and small degree in
+                      lungs yielding various metabolites
+                    </li>
+                    <li>
+                      Ortho-toluidine may cause methemoglobinemia (especially in
+                      G6PD deficiency)
+                    </li>
+                  </ul>
+                </ul>
+              </td>
+              <td>600 mg</td>
+            </tr>
+            <tr>
+              <td><strong>Articaine (Septocaine&reg;)</strong></td>
+              <td>Amide (contains ester group)</td>
+              <td>1–6 min</td>
+              <td>
+                <ul>
+                  <li>Moderate</li>
+                  <li>Rapid clearance (t&frac12; &approx; 20 min)</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Metabolized mainly in blood by plasma carboxyesterase and to
+                    lesser extent in liver (CYP) &mdash; suitable in renal
+                    dysfunction
+                  </li>
+                  <li>Contains both ester &amp; amide moieties</li>
+                  <li>Suitable for patients with renal dysfunction</li>
+                </ul>
+              </td>
+              <td>No absolute max (limited by epinephrine)</td>
+            </tr>
+            <tr>
+              <td><strong>Bupivacaine (Marcaine&reg;)</strong></td>
+              <td>Amide</td>
+              <td>2–10 min</td>
+              <td>Long (&approx; 90–180 min)</td>
+              <td>
+                <ul>
+                  <li>
+                    Metabolized in liver by amidases to inactive metabolites
+                  </li>
+                  <li>
+                    High vasodilator activity (often paired with epinephrine)
+                  </li>
+                </ul>
+              </td>
+              <td>90 mg</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <br />
+      <!-- Lecture 4 -->
+      <details>
+        <summary>Lecture 4: Management of Psychiatric Disorders</summary>
+        <table>
+          <thead>
+            <tr>
+              <th><strong>Drug</strong></th>
+              <th><strong>Class / Group</strong></th>
+              <th><strong>Indication</strong></th>
+              <th><strong>MOA</strong></th>
+              <th><strong>Adverse effects / Interactions</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Levodopa–Carbidopa (Sinemet®)</strong></td>
+              <td>Anti‑Parkinson (dopamine precursor)</td>
+              <td>Parkinson disease</td>
+              <td>
+                <ul>
+                  <li>Levodopa converted to dopamine in CNS</li>
+                  <li>
+                    Carbidopa inhibits peripheral decarboxylase to increase CNS
+                    availability
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Orthostatic hypotension</li>
+                  <li>Hallucinations</li>
+                  <li>
+                    <b> Dyskinesia </b>
+                  </li>
+                  <li>Xerostomia</li>
+                  <li>Taste alterations</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Benztropine (Cogentin®)</strong></td>
+              <td>Muscarinic antagonist (antimuscarinic)</td>
+              <td>Adjunct for tremor & rigidity in PD</td>
+              <td>
+                <ul>
+                  <li>Blocks CNS muscarinic receptors</li>
+                  <li>Reduces cholinergic overactivity</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Antimuscarinic effects</li>
+                  <li>
+                    <b> Xerostomia (important in dentistry) </b>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Entacapone</strong></td>
+              <td>COMT inhibitor</td>
+              <td>Adjunct to levodopa in PD</td>
+              <td>
+                <ul>
+                  <li>Inhibits COMT</li>
+                  <li>Reduces peripheral L‑dopa metabolism</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Abnormal taste</li>
+                  <li>Orthostatic hypotension</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Selegiline</strong></td>
+              <td>MAO‑B inhibitor</td>
+              <td>Adjunct in PD to prolong DA action</td>
+              <td>
+                <ul>
+                  <li>Inhibits MAO‑B</li>
+                  <li>Decreases dopamine metabolism in CNS</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Xerostomia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Chlorpromazine / Fluphenazine / Haloperidol</strong>
+              </td>
+              <td>First‑generation (typical) antipsychotics</td>
+              <td>
+                <ul>
+                  <li>Psychosis</li>
+                  <li>Acute mania</li>
+                  <li>Tourette syndrome</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>D2 receptor antagonists (mesolimbic)</li>
+                  <li>Reduce psychotic symptoms</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>High risk extrapyramidal symptoms (EPS)</li>
+                  <li>
+                    <b> Tardive dyskinesia (especially haloperidol) </b>
+                  </li>
+                  <li>Anticholinergic/autonomic effects</li>
+                  <li>Xerostomia</li>
+                  <li>Orthostatic hypotension</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Clozapine</strong></td>
+              <td>Second‑generation (atypical) antipsychotic</td>
+              <td>Refractory schizophrenia</td>
+              <td>
+                <ul>
+                  <li>Blocks 5‑HT2 and D receptors</li>
+                  <li>Also blocks muscarinic receptors</li>
+                  <li>Also blocks histaminic receptors</li>
+                  <li>Also blocks α‑adrenergic receptors</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <b> Agranulocytosis (requires CBC monitoring) </b>
+                  </li>
+                  <li>Metabolic effects</li>
+                  <li>Sedation</li>
+                  <li>Xerostomia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Risperidone</strong></td>
+              <td>Second‑generation antipsychotic</td>
+              <td>
+                <ul>
+                  <li>Schizophrenia</li>
+                  <li>Bipolar mania</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Blocks 5‑HT2 receptors more than D2 receptors</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Metabolic side effects</li>
+                  <li>Sedation</li>
+                  <li>Autonomic effects including xerostomia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Donepezil</strong></td>
+              <td>Acetylcholinesterase inhibitor</td>
+              <td>Dementia due to Alzheimer disease</td>
+              <td>
+                <ul>
+                  <li>
+                    Reversibly inhibits centrally active acetylcholinesterase
+                  </li>
+                  <li>Increases acetylcholine</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Nausea</li>
+                  <li>Diarrhea</li>
+                  <li>Sleep disturbances</li>
+                  <li>Bradycardia</li>
+                  <li>Hypotension</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Rivastigmine</strong></td>
+              <td>Acetylcholinesterase inhibitor</td>
+              <td>
+                <ul>
+                  <li>Dementia due to Alzheimer disease</li>
+                  <li>Parkinson disease–associated dementia</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Reversibly inhibits acetylcholinesterase</li>
+                  <li>Increases acetylcholine</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Gastrointestinal effects similar to donepezil</li>
+                  <li>Bradycardia</li>
+                  <li>Hypotension</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Memantine</strong></td>
+              <td>NMDA receptor antagonist</td>
+              <td>Moderate–severe Alzheimer disease (adjunct)</td>
+              <td>
+                <ul>
+                  <li>Blocks NMDA receptors</li>
+                  <li>Limits calcium influx</li>
+                  <li>Reduces excitotoxicity</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Dizziness</li>
+                  <li>Other CNS effects</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Aducanumab (Aduhelm®)</strong></td>
+              <td>Amyloid‑directed monoclonal antibody (IV)</td>
+              <td>Alzheimer disease (targets amyloid plaques)</td>
+              <td>
+                <ul>
+                  <li>Reduces amyloid β plaques</li>
+                  <li>Antibody‑mediated clearance</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>IV therapy risks</li>
+                  <li>
+                    Disease‑modifying intent (requires specific clinical
+                    guidance)
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Riluzole (Exservan®)</strong></td>
+              <td>ALS agent (glutamate modulator)</td>
+              <td>Amyotrophic lateral sclerosis</td>
+              <td>
+                <ul>
+                  <li>Inhibits glutamate release</li>
+                  <li>Inactivates sodium channels</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Nausea</li>
+                  <li>Oral hypoesthesia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Amitriptyline / Clomipramine</strong></td>
+              <td>Tricyclic antidepressants (TCAs)</td>
+              <td>
+                <ul>
+                  <li>Major depression</li>
+                  <li>OCD (clomipramine)</li>
+                  <li>Neuropathic pain</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Inhibit reuptake of norepinephrine (NE) via NET</li>
+                  <li>Inhibit reuptake of serotonin (5‑HT) via SERT</li>
+                  <li>Block α‑adrenergic receptors</li>
+                  <li>Block histaminic receptors</li>
+                  <li>Block muscarinic receptors</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Antimuscarinic effects (including xerostomia)</li>
+                  <li>Orthostatic hypotension (α‑adrenergic)</li>
+                  <li>Sedation (histaminic)</li>
+                  <li>Tachycardia (sympathomimetic)</li>
+                  <li>Interacts with benzodiazepines</li>
+                  <li>Potentiates epinephrine in local anesthesia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Phenelzine</strong></td>
+              <td>Monoamine oxidase inhibitor (MAOI)</td>
+              <td>Refractory depression</td>
+              <td>
+                <ul>
+                  <li>Inactivates monoamine oxidase enzymes</li>
+                  <li>Increases monoamine concentrations</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Drowsiness</li>
+                  <li>Orthostatic hypotension</li>
+                  <li>Xerostomia</li>
+                  <li>Constipation</li>
+                  <li>
+                    Dangerous tyramine food interactions → hypertensive crisis
+                  </li>
+                  <li>
+                    Potentiates sympathomimetics (monitor epinephrine use)
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong
+                  >Fluoxetine / Sertraline / Citalopram / Escitalopram</strong
+                >
+              </td>
+              <td>Selective serotonin reuptake inhibitors (SSRIs)</td>
+              <td>
+                <ul>
+                  <li>First‑line for major depression</li>
+                  <li>PTSD</li>
+                  <li>OCD</li>
+                  <li>Anxiety disorders</li>
+                  <li>Panic disorder</li>
+                  <li>Orofacial pain</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Selective inhibition of SERT</li>
+                  <li>Increased synaptic serotonin</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>GI irritation</li>
+                  <li>Sexual dysfunction</li>
+                  <li>Weight changes</li>
+                  <li>Increased suicidal thoughts in younger patients</li>
+                  <li>Bruxism</li>
+                  <li>Risk of serotonin syndrome</li>
+                  <li>
+                    Drug interactions with NSAIDs (increased GI bleed risk)
+                  </li>
+                  <li>Fluoxetine and paroxetine inhibit CYP2D6</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Venlafaxine / Duloxetine</strong></td>
+              <td>Serotonin‑norepinephrine reuptake inhibitors (SNRIs)</td>
+              <td>
+                <ul>
+                  <li>Depression</li>
+                  <li>Duloxetine also used for neuropathic pain</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Inhibit reuptake of serotonin</li>
+                  <li>Inhibit reuptake of norepinephrine</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Similar to SSRIs (GI effects)</li>
+                  <li>Sexual dysfunction</li>
+                  <li>Bruxism</li>
+                  <li>Increased blood pressure</li>
+                  <li>Increased heart rate</li>
+                  <li>Insomnia</li>
+                  <li>Anxiety</li>
+                  <li>Xerostomia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Ketamine / Esketamine</strong></td>
+              <td>Rapid‑acting antidepressant (NMDA antagonist)</td>
+              <td>Treatment‑resistant depression</td>
+              <td>
+                <ul>
+                  <li>Enhances glutamate release</li>
+                  <li>Blocks NMDA receptors</li>
+                  <li>Increases BDNF</li>
+                  <li>Enhances neuroplasticity</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Increased blood pressure</li>
+                  <li>Potential tolerance and dependence</li>
+                  <li>Dizziness</li>
+                  <li>Sialorrhea</li>
+                  <li>Altered taste</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Trazodone (‑zodone)</strong></td>
+              <td>Serotonin receptor antagonist (5‑HT2a antagonist)</td>
+              <td>
+                <ul>
+                  <li>Depression</li>
+                  <li>Often used for sedative properties</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Blocks selective serotonin receptors (5‑HT2a)</li>
+                  <li>Minor effects on other receptors</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Sedation</li>
+                  <li>Xerostomia</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Bupropion</strong></td>
+              <td>Dopamine‑norepinephrine reuptake inhibitor</td>
+              <td>
+                <ul>
+                  <li>Depression</li>
+                  <li>Tobacco cessation</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Increases synaptic dopamine by inhibiting reuptake</li>
+                  <li>
+                    Increases synaptic norepinephrine by inhibiting reuptake
+                  </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Lower risk of sexual dysfunction</li>
+                  <li>
+                    <b> Seizure risk at high doses </b>
+                  </li>
+                  <li>Xerostomia (possible)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>St. John's Wort (hyperforin)</strong></td>
+              <td>Herbal antidepressant (OTC)</td>
+              <td>
+                <ul>
+                  <li>Mild–moderate depression</li>
+                  <li>Mood swings</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Active ingredient hyperforin</li>
+                  <li>Multiple actions</li>
+                  <li>Enzyme induction</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Induces CYP3A4</li>
+                  <li>Induces CYP2C9</li>
+                  <li>Many drug interactions</li>
+                  <li>May potentiate MAOIs</li>
+                  <li>May potentiate SSRIs</li>
+                  <li>Increased risk of serotonin syndrome</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Lithium carbonate</strong></td>
+              <td>Mood stabilizer</td>
+              <td>
+                <ul>
+                  <li>Bipolar disorder (mania)</li>
+                  <li>Bipolar depression maintenance</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Exact mechanism unknown</li>
+                  <li>Modulates neurotransmitter release</li>
+                  <li>Modulates intracellular signaling</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Narrow therapeutic index</li>
+                  <li>Xerostomia</li>
+                  <li>Metallic taste</li>
+                  <li>Sedation</li>
+                  <li>
+                    Polyuria and polydipsia (nephrogenic diabetes insipidus)
+                  </li>
+                  <li>Tremor</li>
+                  <li>NSAIDs increase lithium levels</li>
+                  <li>Some antibiotics increase lithium levels</li>
+                  <li>Renal excretion</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Valproic acid</strong></td>
+              <td>Anticonvulsant (used in bipolar)</td>
+              <td>
+                <ul>
+                  <li>Bipolar disorder</li>
+                  <li>Seizures</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Multiple anticonvulsant mechanisms</li>
+                  <li>Potentiates GABA</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Teratogen (spina bifida)</li>
+                  <li>Thrombocytopenia (bleeding risk)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Carbamazepine</strong></td>
+              <td>Anticonvulsant (used in bipolar)</td>
+              <td>
+                <ul>
+                  <li>Bipolar disorder</li>
+                  <li>Seizures</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Blocks voltage‑gated sodium channels</li>
+                  <li>Provides mood stabilization effects</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Teratogen (cleft palate)</li>
+                  <li>Bone marrow suppression</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <br />
+      <!-- Lecture 5 -->
+      <details>
+        <summary>Lecture 5: Drugs Acting on the Cardiovascular System</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Main indication(s)</th>
+              <th>Mechanism (brief)</th>
+              <th>Major adverse effects / dental implications</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Nitroglycerin</strong></td>
+              <td><strong>Organic nitrate (Vasodilator)</strong></td>
+              <td>Acute angina (sublingual and stable)</td>
+              <td>
                 <li>
-                  Metabolized mainly in blood by plasma carboxyesterase and to
-                  lesser extent in liver (CYP) &mdash; suitable in renal
-                  dysfunction
+                  Converted to NO → ↑cGMP → ↑Desphosphorylation of myosin light
+                  chains → vascular smooth muscle relaxation (↓preload, modest
+                  ↓afterload, coronary vasodilation)
                 </li>
-                <li>Contains both ester &amp; amide moieties</li>
-                <li>Suitable for patients with renal dysfunction</li>
-              </ul>
-            </td>
-            <td>No absolute max (limited by epinephrine)</td>
-          </tr>
-          <tr>
-            <td><strong>Bupivacaine (Marcaine&reg;)</strong></td>
-            <td>Amide</td>
-            <td>2–10 min</td>
-            <td>Long (&approx; 90–180 min)</td>
-            <td>
-              <ul>
+                <li>Vasodilation increases blood supply to the heart muscle</li>
+              </td>
+              <td>
                 <li>
-                  Metabolized in liver by amidases to inactive metabolites
+                  <b> Headache </b>
                 </li>
-                <li>
-                  High vasodilator activity (often paired with epinephrine)
-                </li>
-              </ul>
-            </td>
-            <td>90 mg</td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-    <br />
-    <!-- Lecture 4 -->
-    <details>
-      <summary>Lecture 4: Management of Psychiatric Disorders</summary>
-      <table>
-        <thead>
-          <tr>
-            <th><strong>Drug</strong></th>
-            <th><strong>Class / Group</strong></th>
-            <th><strong>Indication</strong></th>
-            <th><strong>MOA</strong></th>
-            <th><strong>Adverse effects / Interactions</strong></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Levodopa–Carbidopa (Sinemet®)</strong></td>
-            <td>Anti‑Parkinson (dopamine precursor)</td>
-            <td>Parkinson disease</td>
-            <td>
-              <ul>
-                <li>Levodopa converted to dopamine in CNS</li>
-                <li>
-                  Carbidopa inhibits peripheral decarboxylase to increase CNS
-                  availability
-                </li>
-              </ul>
-            </td>
-            <td>
-              <ul>
                 <li>Orthostatic hypotension</li>
-                <li>Hallucinations</li>
                 <li>
-                  <b> Dyskinesia </b>
+                  <b> Facial flushing </b>
                 </li>
                 <li>Xerostomia</li>
-                <li>Taste alterations</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Benztropine (Cogentin®)</strong></td>
-            <td>Muscarinic antagonist (antimuscarinic)</td>
-            <td>Adjunct for tremor & rigidity in PD</td>
-            <td>
-              <ul>
-                <li>Blocks CNS muscarinic receptors</li>
-                <li>Reduces cholinergic overactivity</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Antimuscarinic effects</li>
-                <li>
-                  <b> Xerostomia (important in dentistry) </b>
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Entacapone</strong></td>
-            <td>COMT inhibitor</td>
-            <td>Adjunct to levodopa in PD</td>
-            <td>
-              <ul>
-                <li>Inhibits COMT</li>
-                <li>Reduces peripheral L‑dopa metabolism</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Abnormal taste</li>
+                <li>Keep for emergencies</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Isosorbide dinitrate</strong></td>
+              <td><strong>Organic nitrate</strong></td>
+              <td>Angina (longer-acting)</td>
+              <td>Converted to NO → vasodilation</td>
+              <td>
                 <li>Orthostatic hypotension</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Selegiline</strong></td>
-            <td>MAO‑B inhibitor</td>
-            <td>Adjunct in PD to prolong DA action</td>
-            <td>
-              <ul>
-                <li>Inhibits MAO‑B</li>
-                <li>Decreases dopamine metabolism in CNS</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Xerostomia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong>Chlorpromazine / Fluphenazine / Haloperidol</strong>
-            </td>
-            <td>First‑generation (typical) antipsychotics</td>
-            <td>
-              <ul>
-                <li>Psychosis</li>
-                <li>Acute mania</li>
-                <li>Tourette syndrome</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>D2 receptor antagonists (mesolimbic)</li>
-                <li>Reduce psychotic symptoms</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>High risk extrapyramidal symptoms (EPS)</li>
+                <li>Headache</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Aspirin</strong></td>
+              <td><strong>Antiplatelet (NSAID)</strong></td>
+              <td>
+                <li>Prevention of arterial thrombosis in CAD</li>
+                <li>ACS</li>
+              </td>
+              <td>Irreversibly inhibits COX → ↓TxA2 → ↓platelet aggregation</td>
+              <td>Bleeding risk relevant to dental procedures.</td>
+            </tr>
+            <tr>
+              <td><strong>Atorvastatin / Simvastatin</strong></td>
+              <td><strong>HMG‑CoA reductase inhibitors (Statins)</strong></td>
+              <td>
                 <li>
-                  <b> Tardive dyskinesia (especially haloperidol) </b>
+                  Hyperlipidemia (Hypercholesterolemia and Hypertriglyceridemia)
                 </li>
-                <li>Anticholinergic/autonomic effects</li>
-                <li>Xerostomia</li>
-                <li>Orthostatic hypotension</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Clozapine</strong></td>
-            <td>Second‑generation (atypical) antipsychotic</td>
-            <td>Refractory schizophrenia</td>
-            <td>
-              <ul>
-                <li>Blocks 5‑HT2 and D receptors</li>
-                <li>Also blocks muscarinic receptors</li>
-                <li>Also blocks histaminic receptors</li>
-                <li>Also blocks α‑adrenergic receptors</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
+                <li>Reduce LDL/TG</li>
+              </td>
+              <td>
                 <li>
-                  <b> Agranulocytosis (requires CBC monitoring) </b>
+                  Inhibit HMG‑CoA reductase → ↓cholesterol synthesis → ↑LDL
+                  catabolism → ↓TG Levels
                 </li>
-                <li>Metabolic effects</li>
-                <li>Sedation</li>
-                <li>Xerostomia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Risperidone</strong></td>
-            <td>Second‑generation antipsychotic</td>
-            <td>
-              <ul>
-                <li>Schizophrenia</li>
-                <li>Bipolar mania</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Blocks 5‑HT2 receptors more than D2 receptors</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Metabolic side effects</li>
-                <li>Sedation</li>
-                <li>Autonomic effects including xerostomia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Donepezil</strong></td>
-            <td>Acetylcholinesterase inhibitor</td>
-            <td>Dementia due to Alzheimer disease</td>
-            <td>
-              <ul>
+                <li>Competitive inhibitors in liver</li>
+              </td>
+              <td>
+                <li>Myalgia → myopathy → (rare) rhabdomyolysis</li>
+                <li>↑LFTs</li>
+                <li>Interactions with azoles/macrolides</li>
+                <li>Contraindicated in pregnancy</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Ezetimibe</strong></td>
+              <td><strong>Cholesterol absorption inhibitor</strong></td>
+              <td>Adjunct/alternative to statins</td>
+              <td>
+                Inhibits intestinal cholesterol absorption → ↓hepatic
+                cholesterol
+              </td>
+              <td>Generally well tolerated.</td>
+            </tr>
+            <tr>
+              <td><strong>Quinidine</strong></td>
+              <td>
+                <strong>Class I antiarrhythmic (Na⁺ channel blocker)</strong>
+              </td>
+              <td>Atrial &amp; ventricular tachyarrhythmias</td>
+              <td>
+                Blocks Na⁺ channels → ↓conduction velocity &amp; excitability
+              </td>
+              <td>
+                <li>Anticholinergic (xerostomia)</li>
+                <li>thrombocytopenia (gingival bleeding)</li>
+                <li>CYP3A4 interactions (macrolides/azoles).</li>
                 <li>
-                  Reversibly inhibits centrally active acetylcholinesterase
+                  Inihibtor for CYP2D6 and may effect metabolism of opioid
+                  analgesics
                 </li>
-                <li>Increases acetylcholine</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Nausea</li>
-                <li>Diarrhea</li>
-                <li>Sleep disturbances</li>
+                <li>
+                  Cinchonism: Blurred vision, tinnitus, disorientation,
+                  psychosis
+                </li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Disopyramide</strong></td>
+              <td><strong>Class I antiarrhythmic</strong></td>
+              <td>Tachyarrhythmias</td>
+              <td>Na⁺ channel blockade → slows conduction</td>
+              <td>
+                <li>Anticholinergic effects (xerostomia)</li>
+                <li>Thrombocytopenia risk</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Lidocaine</strong></td>
+              <td>
+                <strong>Class I antiarrhythmic / local anesthetic</strong>
+              </td>
+              <td>
+                <li>Ventricular arrhythmias (acute)</li>
+                <li>Local anesthesia</li>
+              </td>
+              <td>Na⁺ channel blockade (preferential in ischemic tissue)</td>
+              <td>Fewer anticholinergic effects vs other Class I agents.</td>
+            </tr>
+            <tr>
+              <td><strong>Metoprolol</strong></td>
+              <td><strong>Class II (β‑blocker)</strong></td>
+              <td>
+                <li>Rate control in tachyarrhythmias</li>
+                <li>Arrhythmias</li>
+                <li>HTN</li>
+                <li>Angina</li>
+                <li>Heart Failure</li>
+              </td>
+              <td>
+                <li>Target pacemaker cells</li>
+                <li>
+                  β1 blockade → ↓HR, Prolong AV conduction, ↓contractility
+                </li>
+              </td>
+              <td>
                 <li>Bradycardia</li>
-                <li>Hypotension</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Rivastigmine</strong></td>
-            <td>Acetylcholinesterase inhibitor</td>
-            <td>
-              <ul>
-                <li>Dementia due to Alzheimer disease</li>
-                <li>Parkinson disease–associated dementia</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Reversibly inhibits acetylcholinesterase</li>
-                <li>Increases acetylcholine</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Gastrointestinal effects similar to donepezil</li>
-                <li>Bradycardia</li>
-                <li>Hypotension</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Memantine</strong></td>
-            <td>NMDA receptor antagonist</td>
-            <td>Moderate–severe Alzheimer disease (adjunct)</td>
-            <td>
-              <ul>
-                <li>Blocks NMDA receptors</li>
-                <li>Limits calcium influx</li>
-                <li>Reduces excitotoxicity</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Dizziness</li>
-                <li>Other CNS effects</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Aducanumab (Aduhelm®)</strong></td>
-            <td>Amyloid‑directed monoclonal antibody (IV)</td>
-            <td>Alzheimer disease (targets amyloid plaques)</td>
-            <td>
-              <ul>
-                <li>Reduces amyloid β plaques</li>
-                <li>Antibody‑mediated clearance</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>IV therapy risks</li>
-                <li>
-                  Disease‑modifying intent (requires specific clinical guidance)
-                </li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Riluzole (Exservan®)</strong></td>
-            <td>ALS agent (glutamate modulator)</td>
-            <td>Amyotrophic lateral sclerosis</td>
-            <td>
-              <ul>
-                <li>Inhibits glutamate release</li>
-                <li>Inactivates sodium channels</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Nausea</li>
-                <li>Oral hypoesthesia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Amitriptyline / Clomipramine</strong></td>
-            <td>Tricyclic antidepressants (TCAs)</td>
-            <td>
-              <ul>
-                <li>Major depression</li>
-                <li>OCD (clomipramine)</li>
-                <li>Neuropathic pain</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Inhibit reuptake of norepinephrine (NE) via NET</li>
-                <li>Inhibit reuptake of serotonin (5‑HT) via SERT</li>
-                <li>Block α‑adrenergic receptors</li>
-                <li>Block histaminic receptors</li>
-                <li>Block muscarinic receptors</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Antimuscarinic effects (including xerostomia)</li>
-                <li>Orthostatic hypotension (α‑adrenergic)</li>
-                <li>Sedation (histaminic)</li>
-                <li>Tachycardia (sympathomimetic)</li>
-                <li>Interacts with benzodiazepines</li>
-                <li>Potentiates epinephrine in local anesthesia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Phenelzine</strong></td>
-            <td>Monoamine oxidase inhibitor (MAOI)</td>
-            <td>Refractory depression</td>
-            <td>
-              <ul>
-                <li>Inactivates monoamine oxidase enzymes</li>
-                <li>Increases monoamine concentrations</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Drowsiness</li>
                 <li>Orthostatic hypotension</li>
-                <li>Xerostomia</li>
-                <li>Constipation</li>
+                <li>Fatigue</li>
+                <li>Monitor epinephrineuse in dental local anesthesia</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Propranolol</strong></td>
+              <td><strong>Nonselective β‑blocker</strong></td>
+              <td>
+                <li>Tachyarrhythmias</li>
+                <li>Heart Failure</li>
+                <li>HTN (especially with other heart conditions)</li>
+                <li>Angina</li>
+                <li>Arrhythmia</li>
+              </td>
+              <td>
                 <li>
-                  Dangerous tyramine food interactions → hypertensive crisis
+                  Block β1 receptors (response to Epi and NE) → ↓HR &amp; ↓
+                  firing at SA, AV Nodes &amp; CO
                 </li>
-                <li>Potentiates sympathomimetics (monitor epinephrine use)</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <strong
-                >Fluoxetine / Sertraline / Citalopram / Escitalopram</strong
-              >
-            </td>
-            <td>Selective serotonin reuptake inhibitors (SSRIs)</td>
-            <td>
-              <ul>
-                <li>First‑line for major depression</li>
-                <li>PTSD</li>
-                <li>OCD</li>
-                <li>Anxiety disorders</li>
-                <li>Panic disorder</li>
-                <li>Orofacial pain</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Selective inhibition of SERT</li>
-                <li>Increased synaptic serotonin</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>GI irritation</li>
-                <li>Sexual dysfunction</li>
-                <li>Weight changes</li>
-                <li>Increased suicidal thoughts in younger patients</li>
-                <li>Bruxism</li>
-                <li>Risk of serotonin syndrome</li>
-                <li>Drug interactions with NSAIDs (increased GI bleed risk)</li>
-                <li>Fluoxetine and paroxetine inhibit CYP2D6</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Venlafaxine / Duloxetine</strong></td>
-            <td>Serotonin‑norepinephrine reuptake inhibitors (SNRIs)</td>
-            <td>
-              <ul>
-                <li>Depression</li>
-                <li>Duloxetine also used for neuropathic pain</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Inhibit reuptake of serotonin</li>
-                <li>Inhibit reuptake of norepinephrine</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Similar to SSRIs (GI effects)</li>
-                <li>Sexual dysfunction</li>
-                <li>Bruxism</li>
-                <li>Increased blood pressure</li>
-                <li>Increased heart rate</li>
-                <li>Insomnia</li>
-                <li>Anxiety</li>
-                <li>Xerostomia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Ketamine / Esketamine</strong></td>
-            <td>Rapid‑acting antidepressant (NMDA antagonist)</td>
-            <td>Treatment‑resistant depression</td>
-            <td>
-              <ul>
-                <li>Enhances glutamate release</li>
-                <li>Blocks NMDA receptors</li>
-                <li>Increases BDNF</li>
-                <li>Enhances neuroplasticity</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Increased blood pressure</li>
-                <li>Potential tolerance and dependence</li>
-                <li>Dizziness</li>
-                <li>Sialorrhea</li>
+                <li>
+                  Block β1 receptors in kidney → ↓renin production →
+                  ↓angiotensin II
+                </li>
+              </td>
+              <td>
+                <li>Bradycardia</li>
+                <li>
+                  <b> Insomnia </b>
+                </li>
+                <li>Orthostatic hypotension</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Atenolol</strong></td>
+              <td><strong>β1‑selective blocker</strong></td>
+              <td>
+                <li>HTN</li>
+                <li>Angina</li>
+                <li>Arrhythmias</li>
+                <li>Heart Failure</li>
+                <li>Tachyarrhythmias</li>
+              </td>
+              <td>Selective β1 blockade → ↓HR &amp; contractility</td>
+              <td>
+                <li>Bradycardia</li>
+                <li>Orthostatic hypotension</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Amiodarone</strong></td>
+              <td>
+                <strong>Class III antiarrhythmic (K⁺ channel blocker)</strong>
+              </td>
+              <td>Broad‑spectrum antiarrhythmic (ventricular arrhythmias)</td>
+              <td>
+                Blocks K⁺ outflux during repolarization → prolonged refractory
+                period in cardiomyocytes
+              </td>
+              <td>
+                <li>Pulmonary fibrosis</li>
+                <li>Neuropathy</li>
+                <li>Hepatotoxicity</li>
                 <li>Altered taste</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Trazodone (‑zodone)</strong></td>
-            <td>Serotonin receptor antagonist (5‑HT2a antagonist)</td>
-            <td>
-              <ul>
-                <li>Depression</li>
-                <li>Often used for sedative properties</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Blocks selective serotonin receptors (5‑HT2a)</li>
-                <li>Minor effects on other receptors</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Sedation</li>
-                <li>Xerostomia</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Bupropion</strong></td>
-            <td>Dopamine‑norepinephrine reuptake inhibitor</td>
-            <td>
-              <ul>
-                <li>Depression</li>
-                <li>Tobacco cessation</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Increases synaptic dopamine by inhibiting reuptake</li>
+                <li>Many CYP interactions (affects codeine, fentanyl).</li>
+                <li>May induce arrhythmias</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Diltiazem / Verapamil</strong></td>
+              <td><strong>Class IV (non‑dihydropyridine CCBs)</strong></td>
+              <td>
+                <li>Rate control in arrhythmias</li>
+                <li>Angina</li>
+                <li>HTN</li>
+              </td>
+              <td>
+                <li>Prevent repolarization stage in pacemaker cells</li>
                 <li>
-                  Increases synaptic norepinephrine by inhibiting reuptake
+                  Block L‑type Ca²⁺ channels in myocardium → slow SA/AV
+                  conduction, ↓contractility
                 </li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Lower risk of sexual dysfunction</li>
-                <li>
-                  <b> Seizure risk at high doses </b>
-                </li>
-                <li>Xerostomia (possible)</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>St. John's Wort (hyperforin)</strong></td>
-            <td>Herbal antidepressant (OTC)</td>
-            <td>
-              <ul>
-                <li>Mild–moderate depression</li>
-                <li>Mood swings</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Active ingredient hyperforin</li>
-                <li>Multiple actions</li>
-                <li>Enzyme induction</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Induces CYP3A4</li>
-                <li>Induces CYP2C9</li>
-                <li>Many drug interactions</li>
-                <li>May potentiate MAOIs</li>
-                <li>May potentiate SSRIs</li>
-                <li>Increased risk of serotonin syndrome</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Lithium carbonate</strong></td>
-            <td>Mood stabilizer</td>
-            <td>
-              <ul>
-                <li>Bipolar disorder (mania)</li>
-                <li>Bipolar depression maintenance</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Exact mechanism unknown</li>
-                <li>Modulates neurotransmitter release</li>
-                <li>Modulates intracellular signaling</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Narrow therapeutic index</li>
-                <li>Xerostomia</li>
-                <li>Metallic taste</li>
-                <li>Sedation</li>
-                <li>
-                  Polyuria and polydipsia (nephrogenic diabetes insipidus)
-                </li>
-                <li>Tremor</li>
-                <li>NSAIDs increase lithium levels</li>
-                <li>Some antibiotics increase lithium levels</li>
-                <li>Renal excretion</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Valproic acid</strong></td>
-            <td>Anticonvulsant (used in bipolar)</td>
-            <td>
-              <ul>
-                <li>Bipolar disorder</li>
-                <li>Seizures</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Multiple anticonvulsant mechanisms</li>
-                <li>Potentiates GABA</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Teratogen (spina bifida)</li>
-                <li>Thrombocytopenia (bleeding risk)</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Carbamazepine</strong></td>
-            <td>Anticonvulsant (used in bipolar)</td>
-            <td>
-              <ul>
-                <li>Bipolar disorder</li>
-                <li>Seizures</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Blocks voltage‑gated sodium channels</li>
-                <li>Provides mood stabilization effects</li>
-              </ul>
-            </td>
-            <td>
-              <ul>
-                <li>Teratogen (cleft palate)</li>
-                <li>Bone marrow suppression</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-    <br />
-    <!-- Lecture 5 -->
-    <details>
-      <summary>Lecture 5: Drugs Acting on the Cardiovascular System</summary>
-      <table>
-        <thead>
-          <tr>
-            <th>Drug</th>
-            <th>Class</th>
-            <th>Main indication(s)</th>
-            <th>Mechanism (brief)</th>
-            <th>Major adverse effects / dental implications</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Nitroglycerin</strong></td>
-            <td><strong>Organic nitrate (Vasodilator)</strong></td>
-            <td>Acute angina (sublingual and stable)</td>
-            <td>
-              <li>
-                Converted to NO → ↑cGMP → ↑Desphosphorylation of myosin light
-                chains → vascular smooth muscle relaxation (↓preload, modest
-                ↓afterload, coronary vasodilation)
-              </li>
-              <li>Vasodilation increases blood supply to the heart muscle</li>
-            </td>
-            <td>
-              <li>
-                <b> Headache </b>
-              </li>
-              <li>Orthostatic hypotension</li>
-              <li>
-                <b> Facial flushing </b>
-              </li>
-              <li>Xerostomia</li>
-              <li>Keep for emergencies</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Isosorbide dinitrate</strong></td>
-            <td><strong>Organic nitrate</strong></td>
-            <td>Angina (longer-acting)</td>
-            <td>Converted to NO → vasodilation</td>
-            <td>
-              <li>Orthostatic hypotension</li>
-              <li>Headache</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Aspirin</strong></td>
-            <td><strong>Antiplatelet (NSAID)</strong></td>
-            <td>
-              <li>Prevention of arterial thrombosis in CAD</li>
-              <li>ACS</li>
-            </td>
-            <td>Irreversibly inhibits COX → ↓TxA2 → ↓platelet aggregation</td>
-            <td>Bleeding risk relevant to dental procedures.</td>
-          </tr>
-          <tr>
-            <td><strong>Atorvastatin / Simvastatin</strong></td>
-            <td><strong>HMG‑CoA reductase inhibitors (Statins)</strong></td>
-            <td>
-              <li>
-                Hyperlipidemia (Hypercholesterolemia and Hypertriglyceridemia)
-              </li>
-              <li>Reduce LDL/TG</li>
-            </td>
-            <td>
-              <li>
-                Inhibit HMG‑CoA reductase → ↓cholesterol synthesis → ↑LDL
-                catabolism → ↓TG Levels
-              </li>
-              <li>Competitive inhibitors in liver</li>
-            </td>
-            <td>
-              <li>Myalgia → myopathy → (rare) rhabdomyolysis</li>
-              <li>↑LFTs</li>
-              <li>Interactions with azoles/macrolides</li>
-              <li>Contraindicated in pregnancy</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Ezetimibe</strong></td>
-            <td><strong>Cholesterol absorption inhibitor</strong></td>
-            <td>Adjunct/alternative to statins</td>
-            <td>
-              Inhibits intestinal cholesterol absorption → ↓hepatic cholesterol
-            </td>
-            <td>Generally well tolerated.</td>
-          </tr>
-          <tr>
-            <td><strong>Quinidine</strong></td>
-            <td>
-              <strong>Class I antiarrhythmic (Na⁺ channel blocker)</strong>
-            </td>
-            <td>Atrial &amp; ventricular tachyarrhythmias</td>
-            <td>
-              Blocks Na⁺ channels → ↓conduction velocity &amp; excitability
-            </td>
-            <td>
-              <li>Anticholinergic (xerostomia)</li>
-              <li>thrombocytopenia (gingival bleeding)</li>
-              <li>CYP3A4 interactions (macrolides/azoles).</li>
-              <li>
-                Inihibtor for CYP2D6 and may effect metabolism of opioid
-                analgesics
-              </li>
-              <li>
-                Cinchonism: Blurred vision, tinnitus, disorientation, psychosis
-              </li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Disopyramide</strong></td>
-            <td><strong>Class I antiarrhythmic</strong></td>
-            <td>Tachyarrhythmias</td>
-            <td>Na⁺ channel blockade → slows conduction</td>
-            <td>
-              <li>Anticholinergic effects (xerostomia)</li>
-              <li>Thrombocytopenia risk</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Lidocaine</strong></td>
-            <td><strong>Class I antiarrhythmic / local anesthetic</strong></td>
-            <td>
-              <li>Ventricular arrhythmias (acute)</li>
-              <li>Local anesthesia</li>
-            </td>
-            <td>Na⁺ channel blockade (preferential in ischemic tissue)</td>
-            <td>Fewer anticholinergic effects vs other Class I agents.</td>
-          </tr>
-          <tr>
-            <td><strong>Metoprolol</strong></td>
-            <td><strong>Class II (β‑blocker)</strong></td>
-            <td>
-              <li>Rate control in tachyarrhythmias</li>
-              <li>Arrhythmias</li>
-              <li>HTN</li>
-              <li>Angina</li>
-              <li>Heart Failure</li>
-            </td>
-            <td>
-              <li>Target pacemaker cells</li>
-              <li>β1 blockade → ↓HR, Prolong AV conduction, ↓contractility</li>
-            </td>
-            <td>
-              <li>Bradycardia</li>
-              <li>Orthostatic hypotension</li>
-              <li>Fatigue</li>
-              <li>Monitor epinephrineuse in dental local anesthesia</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Propranolol</strong></td>
-            <td><strong>Nonselective β‑blocker</strong></td>
-            <td>
-              <li>Tachyarrhythmias</li>
-              <li>Heart Failure</li>
-              <li>HTN (especially with other heart conditions)</li>
-              <li>Angina</li>
-              <li>Arrhythmia</li>
-            </td>
-            <td>
-              <li>
-                Block β1 receptors (response to Epi and NE) → ↓HR &amp; ↓ firing
-                at SA, AV Nodes &amp; CO
-              </li>
-              <li>
-                Block β1 receptors in kidney → ↓renin production → ↓angiotensin
-                II
-              </li>
-            </td>
-            <td>
-              <li>Bradycardia</li>
-              <li>
-                <b> Insomnia </b>
-              </li>
-              <li>Orthostatic hypotension</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Atenolol</strong></td>
-            <td><strong>β1‑selective blocker</strong></td>
-            <td>
-              <li>HTN</li>
-              <li>Angina</li>
-              <li>Arrhythmias</li>
-              <li>Heart Failure</li>
-              <li>Tachyarrhythmias</li>
-            </td>
-            <td>Selective β1 blockade → ↓HR &amp; contractility</td>
-            <td>
-              <li>Bradycardia</li>
-              <li>Orthostatic hypotension</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Amiodarone</strong></td>
-            <td>
-              <strong>Class III antiarrhythmic (K⁺ channel blocker)</strong>
-            </td>
-            <td>Broad‑spectrum antiarrhythmic (ventricular arrhythmias)</td>
-            <td>
-              Blocks K⁺ outflux during repolarization → prolonged refractory
-              period in cardiomyocytes
-            </td>
-            <td>
-              <li>Pulmonary fibrosis</li>
-              <li>Neuropathy</li>
-              <li>Hepatotoxicity</li>
-              <li>Altered taste</li>
-              <li>Many CYP interactions (affects codeine, fentanyl).</li>
-              <li>May induce arrhythmias</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Diltiazem / Verapamil</strong></td>
-            <td><strong>Class IV (non‑dihydropyridine CCBs)</strong></td>
-            <td>
-              <li>Rate control in arrhythmias</li>
-              <li>Angina</li>
-              <li>HTN</li>
-            </td>
-            <td>
-              <li>Prevent repolarization stage in pacemaker cells</li>
-              <li>
-                Block L‑type Ca²⁺ channels in myocardium → slow SA/AV
-                conduction, ↓contractility
-              </li>
-              <li>Prolong effective refractory period</li>
-            </td>
-            <td>
-              <li>Bradycardia</li>
-              <li>Hypotension</li>
-              <li>Gingival hyperplasia</li>
-              <li>Interacts with macrolides via CYP3A4. (diltiazem)</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Nifedipine / Amlodipine</strong></td>
-            <td><strong>Dihydropyridine CCBs</strong></td>
-            <td>
-              <li>HTN</li>
-              <li>Angina</li>
-            </td>
-            <td>
-              Block vascular Ca²⁺ channels → arteriolar vasodilation
-              (↓afterload)
-            </td>
-            <td>
-              <li>Dizziness</li>
-              <li>Orthostatic hypotension</li>
-              <li>
-                <b> Peripheral edema </b>
-              </li>
-              <li>
-                Nifedipine &amp; amlodipine may cause gingival hyperplasia.
-              </li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Isradipine</strong></td>
-            <td><strong>Dihydropyridine CCB (exception)</strong></td>
-            <td>HTN</td>
-            <td>Arteriolar Ca²⁺ channel blockade → vasodilation</td>
-            <td>Typically does not cause gingival hyperplasia (exception).</td>
-          </tr>
-          <tr>
-            <td><strong>Atropine</strong></td>
-            <td><strong>Antimuscarinic</strong></td>
-            <td>Management of bradyarrhythmias</td>
-            <td>
-              <li>
-                Blocks muscarinic ACh receptors → ↑sinus rate &amp; ↑AV
-                conduction &amp; ↑SA conduction velocity
-              </li>
-              <li>↓refractory period</li>
-            </td>
-            <td>
-              <li>Dry mouth (xerostomia)</li>
-              <li>Mydriasis.</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Digoxin (Digox / Lanoxin)</strong></td>
-            <td><strong>Cardiac glycoside (positive inotrope)</strong></td>
-            <td>
-              <li>Heart failure (HFrEF)</li>
-              <li>Rate control in AF</li>
-            </td>
-            <td>
-              Inhibits Na⁺/K⁺ ATPase → ↑intracellular Na⁺ → ↓Na⁺/Ca²⁺ exchange →
-              ↑intracellular Ca²⁺ → ↑contractility
-            </td>
-            <td>
-              <li>Narrow therapeutic index</li>
-              <li>Toxicity → nausea, vomiting, confusion, blurred vision</li>
-              <li>Macrolides &amp; tetracyclines can ↑digoxin levels</li>
-              <li>Arrhythmia risk with vasoconstrictors.</li>
-              <li>Hyperkalemia</li>
-              <li>CYP450 inducers may lower concentration of active drug</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Dapagliflozin (Farxiga)</strong></td>
-            <td><strong>SGLT2 inhibitor</strong></td>
-            <td>
-              <li>Heart failure (↓hospitalization/mortality)</li>
-              <li>With or without Diabetes</li>
-            </td>
-            <td>
-              Inhibits renal SGLT2 → ↑glucosuria → osmotic diuresis (↓preload)
-            </td>
-            <td>
-              <li>Orthostatic hypotension</li>
-              <li>
-                Dental: hypoglycemia risk in diabetic patients under stress.
-              </li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Dobutamine</strong></td>
-            <td>
-              <li>
-                <strong>β‑agonist (β1 &gt; β2)</strong>
-              </li>
-              <li>
-                <strong>Positive inotrope</strong>
-              </li>
-            </td>
-            <td>Acute decompensated HF (IV)</td>
-            <td>β1 agonism → ↑inotropy (some vasodilation via β2)</td>
-            <td>
-              <li>Used IV in acute settings</li>
-              <li>Monitor hemodynamics</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Milrinone</strong></td>
-            <td>
-              <li>
-                <strong>PDE‑3 inhibitor</strong>
-              </li>
-              <li>
-                <strong>Positive inotrope</strong>
-              </li>
-            </td>
-            <td>Acute HF / inotropic support (IV)</td>
-            <td>
-              <li>PDE3 inhibition → ↑cAMP → ↑Ca²⁺ influx</li>
-              <li>
-                Elevated intracellular Ca²⁺ levels and enhanced excitation
-                concentration
-              </li>
-            </td>
-            <td>
-              <li>Arrhythmias, hypotension</li>
-              <li>Used as IV infusion in acute settings</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Prazosin (Minipress)</strong></td>
-            <td><strong>α1‑blocker</strong></td>
-            <td>Refractory HTN (2nd‑line)</td>
-            <td>
-              Arterial &amp; venous smooth muscle relaxation → ↓peripheral
-              resistance
-            </td>
-            <td>
-              <li>Reflex tachycardia</li>
-              <li>Orthostatic hypotension</li>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Clonidine (Catapres)</strong></td>
-            <td><strong>α2‑agonist (central)</strong></td>
-            <td>
-              <li>HTN (not first‑line)</li>
-              <li>ADHD</li>
-            </td>
-            <td>
-              Central α2 agonism → ↓sympathetic outflow (NE and Ach)→
-              ↓peripheral resistance
-            </td>
-            <td>
-              <li>Xerostomia</li>
-              <li>Orthostatic hypotension</li>
-              <li>Sedation</li>
-              <li>Confusion (dental relevance: dry mouth)</li>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <b> Methyldopa </b>
-            </td>
-            <td>
-              <b> α2‑agonist </b>
-            </td>
-            <td>
-              <li>HT (First line)</li>
-              <li>Pregnancy</li>
-            </td>
-            <td>
-              Converted to methylnorepinephrine which diminishes adrenergic
-              outflow from the CNS
-            </td>
-            <td>
-              <li>Sedation</li>
-              <li>Drowsiness</li>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
-    <!-- Lecture 6 -->
-    <br />
-    <details>
-      <summary>Lecture 6 - Renal pharmacology</summary>
-      <table>
-        <thead>
-          <tr>
-            <th>Drug class</th>
-            <th>Example(s)</th>
-            <th>Mechanism of action (MOA)</th>
-            <th>Indications</th>
-            <th>Key adverse effects / precautions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>ACE inhibitors</strong></td>
-            <td>
-              <li>
-                <strong>Captopril</strong>
-              </li>
-              <li>
-                <strong>Enalapril</strong>
-              </li>
-            </td>
-            <td>
-              Block angiotensin‑converting enzyme → ↓ Ang II formation → ↓
-              preload (blood volume) and ↓ afterload (peripheral resistance).
-              <strong>Also ↑ bradykinin</strong> (enhances vasodilation).
-            </td>
-            <td>
-              <li>
-                First‑line for hypertension in patients with heart disease,
-                diabetes, or chronic kidney disease.
-              </li>
-              <li></li>
-            </td>
-            <td>
-              <ul>
-                <li>Dry cough</li>
-                <li>Angioedema</li>
-                <li>Hyperkalemia (↓ aldosterone)</li>
+                <li>Prolong effective refractory period</li>
+              </td>
+              <td>
+                <li>Bradycardia</li>
+                <li>Hypotension</li>
+                <li>Gingival hyperplasia</li>
+                <li>Interacts with macrolides via CYP3A4. (diltiazem)</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Nifedipine / Amlodipine</strong></td>
+              <td><strong>Dihydropyridine CCBs</strong></td>
+              <td>
+                <li>HTN</li>
+                <li>Angina</li>
+              </td>
+              <td>
+                Block vascular Ca²⁺ channels → arteriolar vasodilation
+                (↓afterload)
+              </td>
+              <td>
+                <li>Dizziness</li>
                 <li>Orthostatic hypotension</li>
-                <li>Altered Taste</li>
-                <li><strong>contraindicated in pregnancy</strong>.</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Angiotensin II receptor blockers (ARBs)</strong></td>
-            <td>
-              <li>
-                <strong>Losartan</strong>
-              </li>
-              <li>
-                <strong>Valsartan</strong>
-              </li>
-            </td>
-            <td>
-              Competitive antagonists at AT1 receptor → block Ang II effects
-              (vasodilation, block aldosterone). Do
-              <strong>not</strong> increase bradykinin.
-            </td>
-            <td>
-              First‑line option for hypertension (esp. diabetes, HF, CKD).
-            </td>
-            <td>
-              <ul>
-                <li>More likely to cause Hypotension over ACEi</li>
+                <li>
+                  <b> Peripheral edema </b>
+                </li>
+                <li>
+                  Nifedipine &amp; amlodipine may cause gingival hyperplasia.
+                </li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Isradipine</strong></td>
+              <td><strong>Dihydropyridine CCB (exception)</strong></td>
+              <td>HTN</td>
+              <td>Arteriolar Ca²⁺ channel blockade → vasodilation</td>
+              <td>
+                Typically does not cause gingival hyperplasia (exception).
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Atropine</strong></td>
+              <td><strong>Antimuscarinic</strong></td>
+              <td>Management of bradyarrhythmias</td>
+              <td>
+                <li>
+                  Blocks muscarinic ACh receptors → ↑sinus rate &amp; ↑AV
+                  conduction &amp; ↑SA conduction velocity
+                </li>
+                <li>↓refractory period</li>
+              </td>
+              <td>
+                <li>Dry mouth (xerostomia)</li>
+                <li>Mydriasis.</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Digoxin (Digox / Lanoxin)</strong></td>
+              <td><strong>Cardiac glycoside (positive inotrope)</strong></td>
+              <td>
+                <li>Heart failure (HFrEF)</li>
+                <li>Rate control in AF</li>
+              </td>
+              <td>
+                Inhibits Na⁺/K⁺ ATPase → ↑intracellular Na⁺ → ↓Na⁺/Ca²⁺ exchange
+                → ↑intracellular Ca²⁺ → ↑contractility
+              </td>
+              <td>
+                <li>Narrow therapeutic index</li>
+                <li>Toxicity → nausea, vomiting, confusion, blurred vision</li>
+                <li>Macrolides &amp; tetracyclines can ↑digoxin levels</li>
+                <li>Arrhythmia risk with vasoconstrictors.</li>
                 <li>Hyperkalemia</li>
-                <li>Less cough/angioedema than ACEi</li>
-                <li><strong>contraindicated in pregnancy</strong>.</li>
-                <li>Avoid combining with ACEi.</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Renin inhibitor</strong></td>
-            <td>
-              <strong>Aliskiren (Tekturna®)</strong>
-            </td>
-            <td>
-              Selective renin inhibitor → blocks conversion of angiotensinogen
-              to Ang I.
-            </td>
-            <td>Hypertension.</td>
-            <td>
-              <ul>
-                <li>May cause angioedema (less than ACEi)</li>
+                <li>CYP450 inducers may lower concentration of active drug</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Dapagliflozin (Farxiga)</strong></td>
+              <td><strong>SGLT2 inhibitor</strong></td>
+              <td>
+                <li>Heart failure (↓hospitalization/mortality)</li>
+                <li>With or without Diabetes</li>
+              </td>
+              <td>
+                Inhibits renal SGLT2 → ↑glucosuria → osmotic diuresis (↓preload)
+              </td>
+              <td>
+                <li>Orthostatic hypotension</li>
                 <li>
-                  <strong>contraindicated in pregnancy</strong>, do not combine
-                  with ACEi/ARB
+                  Dental: hypoglycemia risk in diabetic patients under stress.
                 </li>
-                <li>metabolized by CYP3A4.</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Other CVS agents (brief)</strong></td>
-            <td>
-              <li>
-                <strong>Colchicine (0.5 mg/day)</strong>
-              </li>
-              <li>
-                <strong>Aspirin (81 mg/day)</strong>
-              </li>
-            </td>
-            <td>
-              <li>
-                <strong> Colchicine: </strong>
-                anti‑inflammatory (used low dose for CV risk
-                reduction)(Anti-gout)
-              </li>
-              <li>
-                <strong> Aspirin: </strong>
-                antiplatelet (cardioprotection)
-              </li>
-            </td>
-            <td>
-              <li>
-                <strong> Colchicine: </strong>
-                reduce MI/stroke risk in certain atherosclerotic patients.
-              </li>
-              <li>
-                <strong> Aspirin: </strong>
-                cardioprotection.
-              </li>
-            </td>
-            <td>
-              <ul>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Dobutamine</strong></td>
+              <td>
                 <li>
-                  <strong> Aspirin: </strong>
-                  affects hemostasis (dose/interaction dependent).
+                  <strong>β‑agonist (β1 &gt; β2)</strong>
                 </li>
+                <li>
+                  <strong>Positive inotrope</strong>
+                </li>
+              </td>
+              <td>Acute decompensated HF (IV)</td>
+              <td>β1 agonism → ↑inotropy (some vasodilation via β2)</td>
+              <td>
+                <li>Used IV in acute settings</li>
+                <li>Monitor hemodynamics</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Milrinone</strong></td>
+              <td>
+                <li>
+                  <strong>PDE‑3 inhibitor</strong>
+                </li>
+                <li>
+                  <strong>Positive inotrope</strong>
+                </li>
+              </td>
+              <td>Acute HF / inotropic support (IV)</td>
+              <td>
+                <li>PDE3 inhibition → ↑cAMP → ↑Ca²⁺ influx</li>
+                <li>
+                  Elevated intracellular Ca²⁺ levels and enhanced excitation
+                  concentration
+                </li>
+              </td>
+              <td>
+                <li>Arrhythmias, hypotension</li>
+                <li>Used as IV infusion in acute settings</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Prazosin (Minipress)</strong></td>
+              <td><strong>α1‑blocker</strong></td>
+              <td>Refractory HTN (2nd‑line)</td>
+              <td>
+                Arterial &amp; venous smooth muscle relaxation → ↓peripheral
+                resistance
+              </td>
+              <td>
+                <li>Reflex tachycardia</li>
+                <li>Orthostatic hypotension</li>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Clonidine (Catapres)</strong></td>
+              <td><strong>α2‑agonist (central)</strong></td>
+              <td>
+                <li>HTN (not first‑line)</li>
+                <li>ADHD</li>
+              </td>
+              <td>
+                Central α2 agonism → ↓sympathetic outflow (NE and Ach)→
+                ↓peripheral resistance
+              </td>
+              <td>
+                <li>Xerostomia</li>
+                <li>Orthostatic hypotension</li>
+                <li>Sedation</li>
+                <li>Confusion (dental relevance: dry mouth)</li>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <b> Methyldopa </b>
+              </td>
+              <td>
+                <b> α2‑agonist </b>
+              </td>
+              <td>
+                <li>HT (First line)</li>
+                <li>Pregnancy</li>
+              </td>
+              <td>
+                Converted to methylnorepinephrine which diminishes adrenergic
+                outflow from the CNS
+              </td>
+              <td>
+                <li>Sedation</li>
+                <li>Drowsiness</li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+      <!-- Lecture 6 -->
+      <br />
+      <details>
+        <summary>Lecture 6 - Renal pharmacology</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Drug class</th>
+              <th>Example(s)</th>
+              <th>Mechanism of action (MOA)</th>
+              <th>Indications</th>
+              <th>Key adverse effects / precautions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ACE inhibitors</strong></td>
+              <td>
+                <li>
+                  <strong>Captopril</strong>
+                </li>
+                <li>
+                  <strong>Enalapril</strong>
+                </li>
+              </td>
+              <td>
+                Block angiotensin‑converting enzyme → ↓ Ang II formation → ↓
+                preload (blood volume) and ↓ afterload (peripheral resistance).
+                <strong>Also ↑ bradykinin</strong> (enhances vasodilation).
+              </td>
+              <td>
+                <li>
+                  First‑line for hypertension in patients with heart disease,
+                  diabetes, or chronic kidney disease.
+                </li>
+                <li></li>
+              </td>
+              <td>
+                <ul>
+                  <li>Dry cough</li>
+                  <li>Angioedema</li>
+                  <li>Hyperkalemia (↓ aldosterone)</li>
+                  <li>Orthostatic hypotension</li>
+                  <li>Altered Taste</li>
+                  <li><strong>contraindicated in pregnancy</strong>.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Angiotensin II receptor blockers (ARBs)</strong></td>
+              <td>
+                <li>
+                  <strong>Losartan</strong>
+                </li>
+                <li>
+                  <strong>Valsartan</strong>
+                </li>
+              </td>
+              <td>
+                Competitive antagonists at AT1 receptor → block Ang II effects
+                (vasodilation, block aldosterone). Do
+                <strong>not</strong> increase bradykinin.
+              </td>
+              <td>
+                First‑line option for hypertension (esp. diabetes, HF, CKD).
+              </td>
+              <td>
+                <ul>
+                  <li>More likely to cause Hypotension over ACEi</li>
+                  <li>Hyperkalemia</li>
+                  <li>Less cough/angioedema than ACEi</li>
+                  <li><strong>contraindicated in pregnancy</strong>.</li>
+                  <li>Avoid combining with ACEi.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Renin inhibitor</strong></td>
+              <td>
+                <strong>Aliskiren (Tekturna®)</strong>
+              </td>
+              <td>
+                Selective renin inhibitor → blocks conversion of angiotensinogen
+                to Ang I.
+              </td>
+              <td>Hypertension.</td>
+              <td>
+                <ul>
+                  <li>May cause angioedema (less than ACEi)</li>
+                  <li>
+                    <strong>contraindicated in pregnancy</strong>, do not
+                    combine with ACEi/ARB
+                  </li>
+                  <li>metabolized by CYP3A4.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Other CVS agents (brief)</strong></td>
+              <td>
+                <li>
+                  <strong>Colchicine (0.5 mg/day)</strong>
+                </li>
+                <li>
+                  <strong>Aspirin (81 mg/day)</strong>
+                </li>
+              </td>
+              <td>
                 <li>
                   <strong> Colchicine: </strong>
-                  GI and drug interactions (details not expanded here).
-                </li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Osmotic diuretics</strong></td>
-            <td>
-              <strong>Mannitol (Osmitrol®)</strong>
-            </td>
-            <td>
-              Filtered but not reabsorbed → increases tubular osmolarity →
-              retains water in tubule → water diuresis.
-            </td>
-            <td>
-              <li>IV for cerebral edema</li>
-              <li>Elevated intracranial pressure</li>
-            </td>
-            <td>
-              <ul>
-                <li>Volume shifts, electrolyte disturbances</li>
-                <li>use caution in heart failure/edema.</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Carbonic anhydrase inhibitors</strong></td>
-            <td>
-              <strong>Acetazolamide (Diamox®)</strong>
-            </td>
-            <td>
-              Inhibit carbonic anhydrase → reduce HCO3− formation and decrease
-              Na+/H+ exchange → mild bicarbonate diuresis.
-            </td>
-            <td>
-              <li>Reduce intraocular pressure in glaucoma</li>
-              <li>
-                Prophylaxis for altitude sickness. (Overall weak diuretic.)
-              </li>
-            </td>
-            <td>
-              <ul>
-                <li>Metabolic acidosis</li>
-                <li>Electrolyte disturbances</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Loop diuretics</strong></td>
-            <td>
-              <li>
-                <strong>Furosemide (short duration (acute))</strong>
-              </li>
-              <li>
-                <strong>Bumetanide (long)</strong>
-              </li>
-              <li>
-                <strong>Torsemide (long)</strong>
-              </li>
-            </td>
-            <td>
-              <li>
-                Block Na⁺–K⁺–2Cl⁻ symporter in thick ascending limb → potent
-                natriuresis and diuresis
-              </li>
-              <li>↑ excretion of Na⁺, K⁺, Ca²⁺, Mg²⁺.</li>
-            </td>
-            <td>
-              <li>Acute pulmonary edema</li>
-              <li>Edema from renal/liver disease</li>
-              <li>Chronic CHF</li>
-              <li>HTN adjunct</li>
-              <li>Acute hypercalcemia (with renal failure).</li>
-            </td>
-            <td>
-              <ul>
-                <li>Hypokalemia</li>
-                <li>Dose‑related ototoxicity</li>
-                <li>Nephrotoxicity</li>
-                <li>Orthostatic hypotension</li>
-                <li>Hyperuricemia</li>
-                <li>Hypomagnesemia</li>
-                <li>
-                  Sigmoidal dose‑response (threshold &amp; ceiling effects)
+                  anti‑inflammatory (used low dose for CV risk
+                  reduction)(Anti-gout)
                 </li>
                 <li>
-                  Drug interaction: NSAIDs can blunt effect and increase
-                  nephrotoxicity.
+                  <strong> Aspirin: </strong>
+                  antiplatelet (cardioprotection)
                 </li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Thiazide diuretics</strong></td>
-            <td>
-              <li>
-                <strong>Chlorothiazide</strong>
-              </li>
-              <li>
-                <strong>Hydrochlorothiazide (HCTZ)</strong>
-              </li>
-            </td>
-            <td>
-              <li>
-                Inhibit Na+/Cl− transporter in distal convoluted tubule → ↑ NaCl
-                excretion and <strong>↑ Ca2+ reabsorption</strong>
-              </li>
-              <li>
-                Reduce peripheral vascular resistance long‑term (mechanism not
-                fully clear).
-              </li>
-            </td>
-            <td>
-              <li>Hypertension</li>
-              <li>Edema (heart/liver/kidney)</li>
-              <li>Prevention of calcium kidney stone</li>
-              <li>Nephrogenic diabetes</li>
-              <li>Insipidus</li>
-            </td>
-            <td>
-              <ul>
-                <li>Hypokalemia</li>
-                <li>Hyperuricemia</li>
-                <li><strong>Hypercalcemia</strong>,</li>
-                <li>Hyponatremia</li>
-                <li>Hyperglycemia</li>
-                <li>Cross‑allergy with sulfonamide antibiotics</li>
-              </ul>
-            </td>
-          </tr>
-
-          <tr>
-            <td><strong>Potassium‑sparing diuretics</strong></td>
-            <td>
-              <li>
-                <strong> Spironolactone (aldosterone antagonist) </strong>
-              </li>
-              <li>
-                <strong>Amiloride</strong>
-              </li>
-            </td>
-            <td>
-              <li>
-                <b> Spironolactone: </b>
-                aldosterone receptor antagonist → ↓ Na+ reabsorption, ↓ K+
-                secretion, ↓ H+ secretion in collecting duct
-              </li>
-              <li>
-                <b> Amiloride: </b>
-                blocks epithelial Na+ channels (ENaC) in collecting duct, → ↓
-                Na+ reabsorption, ↓ K+ secretion → ↑ Na+ excretion while
-                preserving potassium; Can be used with other diuretics
-              </li>
-            </td>
-            <td>
-              <li>Edema</li>
-              <li>Hypokalemia prevention</li>
-              <li>Refractory HTN (often combined with thiazide/loop)</li>
-            </td>
-            <td>
-              <ul>
+              </td>
+              <td>
                 <li>
-                  Hyperkalemia (↑ arrhythmia risk). Spironolactone may cause
-                  gynecomastia (androgen receptor effects).
+                  <strong> Colchicine: </strong>
+                  reduce MI/stroke risk in certain atherosclerotic patients.
                 </li>
-              </ul>
-            </td>
-          </tr>
+                <li>
+                  <strong> Aspirin: </strong>
+                  cardioprotection.
+                </li>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    <strong> Aspirin: </strong>
+                    affects hemostasis (dose/interaction dependent).
+                  </li>
+                  <li>
+                    <strong> Colchicine: </strong>
+                    GI and drug interactions (details not expanded here).
+                  </li>
+                </ul>
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              <strong
-                >Agents with renal adverse effects (to avoid/adjust)</strong
-              >
-            </td>
-            <td>
-              <li>
-                <strong>NSAIDs</strong>
-              </li>
-              <li>
+            <tr>
+              <td><strong>Osmotic diuretics</strong></td>
+              <td>
+                <strong>Mannitol (Osmitrol®)</strong>
+              </td>
+              <td>
+                Filtered but not reabsorbed → increases tubular osmolarity →
+                retains water in tubule → water diuresis.
+              </td>
+              <td>
+                <li>IV for cerebral edema</li>
+                <li>Elevated intracranial pressure</li>
+              </td>
+              <td>
+                <ul>
+                  <li>Volume shifts, electrolyte disturbances</li>
+                  <li>use caution in heart failure/edema.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Carbonic anhydrase inhibitors</strong></td>
+              <td>
+                <strong>Acetazolamide (Diamox®)</strong>
+              </td>
+              <td>
+                Inhibit carbonic anhydrase → reduce HCO3− formation and decrease
+                Na+/H+ exchange → mild bicarbonate diuresis.
+              </td>
+              <td>
+                <li>Reduce intraocular pressure in glaucoma</li>
+                <li>
+                  Prophylaxis for altitude sickness. (Overall weak diuretic.)
+                </li>
+              </td>
+              <td>
+                <ul>
+                  <li>Metabolic acidosis</li>
+                  <li>Electrolyte disturbances</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Loop diuretics</strong></td>
+              <td>
+                <li>
+                  <strong>Furosemide (short duration (acute))</strong>
+                </li>
+                <li>
+                  <strong>Bumetanide (long)</strong>
+                </li>
+                <li>
+                  <strong>Torsemide (long)</strong>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Block Na⁺–K⁺–2Cl⁻ symporter in thick ascending limb → potent
+                  natriuresis and diuresis
+                </li>
+                <li>↑ excretion of Na⁺, K⁺, Ca²⁺, Mg²⁺.</li>
+              </td>
+              <td>
+                <li>Acute pulmonary edema</li>
+                <li>Edema from renal/liver disease</li>
+                <li>Chronic CHF</li>
+                <li>HTN adjunct</li>
+                <li>Acute hypercalcemia (with renal failure).</li>
+              </td>
+              <td>
+                <ul>
+                  <li>Hypokalemia</li>
+                  <li>Dose‑related ototoxicity</li>
+                  <li>Nephrotoxicity</li>
+                  <li>Orthostatic hypotension</li>
+                  <li>Hyperuricemia</li>
+                  <li>Hypomagnesemia</li>
+                  <li>
+                    Sigmoidal dose‑response (threshold &amp; ceiling effects)
+                  </li>
+                  <li>
+                    Drug interaction: NSAIDs can blunt effect and increase
+                    nephrotoxicity.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Thiazide diuretics</strong></td>
+              <td>
+                <li>
+                  <strong>Chlorothiazide</strong>
+                </li>
+                <li>
+                  <strong>Hydrochlorothiazide (HCTZ)</strong>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Inhibit Na+/Cl− transporter in distal convoluted tubule → ↑
+                  NaCl excretion and <strong>↑ Ca2+ reabsorption</strong>
+                </li>
+                <li>
+                  Reduce peripheral vascular resistance long‑term (mechanism not
+                  fully clear).
+                </li>
+              </td>
+              <td>
+                <li>Hypertension</li>
+                <li>Edema (heart/liver/kidney)</li>
+                <li>Prevention of calcium kidney stone</li>
+                <li>Nephrogenic diabetes</li>
+                <li>Insipidus</li>
+              </td>
+              <td>
+                <ul>
+                  <li>Hypokalemia</li>
+                  <li>Hyperuricemia</li>
+                  <li><strong>Hypercalcemia</strong>,</li>
+                  <li>Hyponatremia</li>
+                  <li>Hyperglycemia</li>
+                  <li>Cross‑allergy with sulfonamide antibiotics</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td><strong>Potassium‑sparing diuretics</strong></td>
+              <td>
+                <li>
+                  <strong> Spironolactone (aldosterone antagonist) </strong>
+                </li>
+                <li>
+                  <strong>Amiloride</strong>
+                </li>
+              </td>
+              <td>
+                <li>
+                  <b> Spironolactone: </b>
+                  aldosterone receptor antagonist → ↓ Na+ reabsorption, ↓ K+
+                  secretion, ↓ H+ secretion in collecting duct
+                </li>
+                <li>
+                  <b> Amiloride: </b>
+                  blocks epithelial Na+ channels (ENaC) in collecting duct, → ↓
+                  Na+ reabsorption, ↓ K+ secretion → ↑ Na+ excretion while
+                  preserving potassium; Can be used with other diuretics
+                </li>
+              </td>
+              <td>
+                <li>Edema</li>
+                <li>Hypokalemia prevention</li>
+                <li>Refractory HTN (often combined with thiazide/loop)</li>
+              </td>
+              <td>
+                <ul>
+                  <li>
+                    Hyperkalemia (↑ arrhythmia risk). Spironolactone may cause
+                    gynecomastia (androgen receptor effects).
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
                 <strong
-                  >Certain antimicrobials (aminoglycosides, vancomycin)</strong
+                  >Agents with renal adverse effects (to avoid/adjust)</strong
                 >
-              </li>
-              <li>
-                <strong>Some chemotherapeutics</strong>
-              </li>
-              <li>
-                <strong>Alcohol/illicit drugs</strong>
-              </li>
-            </td>
-            <td>
-              <li>
-                Various nephrotoxic mechanisms → can damage renal
-                structure/function
-              </li>
-              <li>Dose adjustments required if eGFR &lt;60 mL/min/1.73 m².</li>
-            </td>
-            <td>
-              <li>Avoid or dose‑adjust in CKD</li>
-              <li>Older patients</li>
-            </td>
-            <td>
-              <ul>
-                <li>Potential nephrotoxicity</li>
-                <li>monitor renal function and adjust dosing.</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </details>
+              </td>
+              <td>
+                <li>
+                  <strong>NSAIDs</strong>
+                </li>
+                <li>
+                  <strong
+                    >Certain antimicrobials (aminoglycosides,
+                    vancomycin)</strong
+                  >
+                </li>
+                <li>
+                  <strong>Some chemotherapeutics</strong>
+                </li>
+                <li>
+                  <strong>Alcohol/illicit drugs</strong>
+                </li>
+              </td>
+              <td>
+                <li>
+                  Various nephrotoxic mechanisms → can damage renal
+                  structure/function
+                </li>
+                <li>
+                  Dose adjustments required if eGFR &lt;60 mL/min/1.73 m².
+                </li>
+              </td>
+              <td>
+                <li>Avoid or dose‑adjust in CKD</li>
+                <li>Older patients</li>
+              </td>
+              <td>
+                <ul>
+                  <li>Potential nephrotoxicity</li>
+                  <li>monitor renal function and adjust dosing.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
 
     <style>
       /* same as before */
@@ -1728,6 +1759,20 @@
 
       // Important: name must contain a hyphen
       customElements.define('my-header', MyHeader);
+
+      function checkPassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const correctPassword = 'cprime2029';
+        if (enteredPassword === correctPassword) {
+          document.getElementById('content').style.display = 'block';
+          document.querySelector('h2').style.display = 'none';
+          document.querySelector('p').style.display = 'none';
+          document.getElementById('password').style.display = 'none';
+          event.target.style.display = 'none';
+        } else {
+          alert('Incorrect password. Please try again.');
+        }
+      }
     </script>
   </body>
 </html>
