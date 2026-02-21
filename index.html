@@ -105,6 +105,12 @@
         >
           Shuffle Tables (Press z to shuffle)
         </button>
+        <button
+          id="resetTables"
+          title="Reset all tables to their original order"
+        >
+          Reset Tables (Press X to unshuffle)
+        </button>
       </div>
       <!-- Center a div -->
       <div style="display: flex; justify-content: center; align-items: center">
@@ -3366,6 +3372,34 @@
         for (const row of rows) tbody.appendChild(row);
       }
 
+      /* Capture the original order of rows for all tables inside details blocks */
+      function captureOriginalOrder() {
+        const data = new Map(); // table -> array of row HTML strings (or row elements)
+        document.querySelectorAll("details table").forEach((tbl) => {
+          const tbody = tbl.querySelector("tbody");
+          if (!tbody) return;
+          const order = Array.from(tbody.querySelectorAll("tr")).map((tr) =>
+            tr.cloneNode(true),
+          );
+          data.set(tbl, order);
+        });
+        return data;
+      }
+
+      /* Restore original order for all tables inside details blocks */
+      function resetTablesToOriginal(orderMap) {
+        orderMap.forEach((originalRows, tbl) => {
+          const tbody = tbl.querySelector("tbody");
+          if (!tbody) return;
+          // Remove current rows
+          const current = Array.from(tbody.querySelectorAll("tr"));
+          current.forEach((row) => tbody.removeChild(row));
+
+          // Append copies in original order
+          originalRows.forEach((row) => tbody.appendChild(row.cloneNode(true)));
+        });
+      }
+
       /* Shuffle every table inside every details block independently */
       function shuffleAllTablesInDetails() {
         const detailsBlocks = document.querySelectorAll("details");
@@ -3378,19 +3412,33 @@
 
       /* Wire up button to shuffle all tables per details block without affecting page load order */
       document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("shuffleAllTables");
-        if (btn) {
-          btn.addEventListener("click", () => {
+        // Prepare original order snapshot
+        const originalOrder = captureOriginalOrder();
+
+        const btnShuffle = document.getElementById("shuffleAllTables");
+        if (btnShuffle) {
+          btnShuffle.addEventListener("click", () => {
             shuffleAllTablesInDetails();
           });
         }
 
-        // Add keyboard shortcut: press 'Z' to shuffle
+        const btnReset = document.getElementById("resetTables");
+        if (btnReset) {
+          btnReset.addEventListener("click", () => {
+            // Restore from snapshot
+            resetTablesToOriginal(originalOrder);
+          });
+        }
+
+        // Keyboard shortcuts
         document.addEventListener("keydown", (event) => {
-          // Use 'z' or 'Z'
-          if (event.key.toLowerCase() === "z") {
+          const key = event.key.toLowerCase();
+          if (key === "z") {
             shuffleAllTablesInDetails();
-            // Prevent default to avoid interfering with page shortcuts
+            event.preventDefault();
+          } else if (key === "x") {
+            // Reset to original
+            resetTablesToOriginal(originalOrder);
             event.preventDefault();
           }
         });
