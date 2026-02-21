@@ -3278,50 +3278,61 @@
     </style>
 
     <script>
-      // === BLUR LOGIC ===
+      // === BLUR LOGIC (delegated for reliability after resets) ===
       document.addEventListener("DOMContentLoaded", () => {
-        // Blur: Select table cells + blur-target spans
-        const blurCells = document.querySelectorAll(
-          "table td:not(:first-child), .blur-section .blur-target",
-        );
-
-        blurCells.forEach((cell) => {
-          cell.addEventListener("click", () => {
-            cell.classList.toggle("blurred");
-          });
+        // Delegated click: blur targets
+        document.addEventListener("click", (e) => {
+          const target = e.target;
+          // Blur targets: any table td except first-child, or elements with class 'blur-target'
+          const blurTarget =
+            target.closest("td:not(:first-child)") ||
+            target.closest(".blur-target");
+          if (blurTarget) {
+            blurTarget.classList.toggle("blurred");
+          }
         });
 
-        // Keyboard shortcut (space toggles all)
+        // Space toggles all blurables
         document.addEventListener("keydown", (event) => {
           if (event.code === "Space") {
+            const blurCells = document.querySelectorAll(
+              "table td:not(:first-child), .blur-section .blur-target",
+            );
             const allBlurred = Array.from(blurCells).every((cell) =>
               cell.classList.contains("blurred"),
             );
-            if (allBlurred) {
-              blurCells.forEach((cell) => cell.classList.remove("blurred"));
-            } else {
-              blurCells.forEach((cell) => cell.classList.add("blurred"));
-            }
+            blurCells.forEach((cell) => {
+              if (allBlurred) cell.classList.remove("blurred");
+              else cell.classList.add("blurred");
+            });
             event.preventDefault();
           }
         });
 
-        // Buttons
+        // Buttons (if present)
         const blurAllBtn = document.getElementById("blurAll");
         const unblurAllBtn = document.getElementById("unblurAll");
         if (blurAllBtn) {
           blurAllBtn.addEventListener("click", () => {
-            blurCells.forEach((cell) => cell.classList.add("blurred"));
+            document
+              .querySelectorAll(
+                "table td:not(:first-child), .blur-section .blur-target",
+              )
+              .forEach((el) => el.classList.add("blurred"));
           });
         }
         if (unblurAllBtn) {
           unblurAllBtn.addEventListener("click", () => {
-            blurCells.forEach((cell) => cell.classList.remove("blurred"));
+            document
+              .querySelectorAll(
+                "table td:not(:first-child), .blur-section .blur-target",
+              )
+              .forEach((el) => el.classList.remove("blurred"));
           });
         }
       });
 
-      // === CUSTOM HEADER ELEMENT ===
+      // === CUSTOM HEADER ELEMENT (unchanged) ===
       class MyHeader extends HTMLElement {
         connectedCallback() {
           const text = this.innerHTML.trim() || "Section Title";
@@ -3341,8 +3352,6 @@
       `;
         }
       }
-
-      // Important: name must contain a hyphen
       customElements.define("my-header", MyHeader);
 
       // === PASSWORD CHECK (unchanged) ===
@@ -3360,7 +3369,7 @@
         }
       }
 
-      // === SHUFFLE LOGIC (per-table within details blocks) ===
+      // === SHUFFLE LOGIC (per-table inside details blocks) ===
       function shuffleRowsInTable(table) {
         const tbody = table.querySelector("tbody");
         if (!tbody) return;
@@ -3419,7 +3428,7 @@
         });
       }
 
-      /* Wire up UI and keyboard shortcuts */
+      /* Wire up UI and keyboard shortcuts (Z to shuffle, X to reset) */
       document.addEventListener("DOMContentLoaded", () => {
         // Prepare original order snapshot
         const originalOrder = captureOriginalOrder();
