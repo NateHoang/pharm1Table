@@ -3280,7 +3280,7 @@
     <script>
       // === BLUR LOGIC ===
       document.addEventListener("DOMContentLoaded", () => {
-        // Select table cells + blur-target spans
+        // Blur: Select table cells + blur-target spans
         const blurCells = document.querySelectorAll(
           "table td:not(:first-child), .blur-section .blur-target",
         );
@@ -3307,12 +3307,18 @@
         });
 
         // Buttons
-        document.getElementById("blurAll").addEventListener("click", () => {
-          blurCells.forEach((cell) => cell.classList.add("blurred"));
-        });
-        document.getElementById("unblurAll").addEventListener("click", () => {
-          blurCells.forEach((cell) => cell.classList.remove("blurred"));
-        });
+        const blurAllBtn = document.getElementById("blurAll");
+        const unblurAllBtn = document.getElementById("unblurAll");
+        if (blurAllBtn) {
+          blurAllBtn.addEventListener("click", () => {
+            blurCells.forEach((cell) => cell.classList.add("blurred"));
+          });
+        }
+        if (unblurAllBtn) {
+          unblurAllBtn.addEventListener("click", () => {
+            blurCells.forEach((cell) => cell.classList.remove("blurred"));
+          });
+        }
       });
 
       // === CUSTOM HEADER ELEMENT ===
@@ -3339,6 +3345,7 @@
       // Important: name must contain a hyphen
       customElements.define("my-header", MyHeader);
 
+      // === PASSWORD CHECK (unchanged) ===
       function checkPassword() {
         const enteredPassword = document.getElementById("password").value;
         const correctPassword = "chud";
@@ -3352,6 +3359,8 @@
           alert("Incorrect password. Please try again.");
         }
       }
+
+      // === SHUFFLE LOGIC (per-table within details blocks) ===
       function shuffleRowsInTable(table) {
         const tbody = table.querySelector("tbody");
         if (!tbody) return;
@@ -3372,9 +3381,9 @@
         for (const row of rows) tbody.appendChild(row);
       }
 
-      /* Capture the original order of rows for all tables inside details blocks */
+      /* Capture the original order of rows for all tables inside details blocks (on page load) */
       function captureOriginalOrder() {
-        const data = new Map(); // table -> array of row HTML strings (or row elements)
+        const data = new Map();
         document.querySelectorAll("details table").forEach((tbl) => {
           const tbody = tbl.querySelector("tbody");
           if (!tbody) return;
@@ -3410,11 +3419,12 @@
         });
       }
 
-      /* Wire up button to shuffle all tables per details block without affecting page load order */
+      /* Wire up UI and keyboard shortcuts */
       document.addEventListener("DOMContentLoaded", () => {
         // Prepare original order snapshot
         const originalOrder = captureOriginalOrder();
 
+        // Button handlers
         const btnShuffle = document.getElementById("shuffleAllTables");
         if (btnShuffle) {
           btnShuffle.addEventListener("click", () => {
@@ -3425,7 +3435,6 @@
         const btnReset = document.getElementById("resetTables");
         if (btnReset) {
           btnReset.addEventListener("click", () => {
-            // Restore from snapshot
             resetTablesToOriginal(originalOrder);
           });
         }
@@ -3437,7 +3446,6 @@
             shuffleAllTablesInDetails();
             event.preventDefault();
           } else if (key === "x") {
-            // Reset to original
             resetTablesToOriginal(originalOrder);
             event.preventDefault();
           }
