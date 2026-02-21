@@ -97,8 +97,14 @@
     <div id="content" style="display: none; margin-top: 20px">
       <!-- <div> -->
       <div class="blur-buttons">
-        <button id="blurAll">Blur All</button>
-        <button id="unblurAll">Unblur All</button>
+        <button id="blurAll">Blur All (Press spacebar to blur)</button>
+        <button id="unblurAll">Unblur All (Press spacebar to unblue)</button>
+        <button
+          id="shuffleAllTables"
+          title="Shuffle each table's rows within its own details block"
+        >
+          Shuffle Tables (Press z to shuffle)
+        </button>
       </div>
       <!-- Center a div -->
       <div style="display: flex; justify-content: center; align-items: center">
@@ -3340,6 +3346,55 @@
           alert("Incorrect password. Please try again.");
         }
       }
+      function shuffleRowsInTable(table) {
+        const tbody = table.querySelector("tbody");
+        if (!tbody) return;
+
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+        if (rows.length <= 1) return;
+
+        // Detach all rows
+        rows.forEach((row) => tbody.removeChild(row));
+
+        // Fisher-Yates shuffle
+        for (let i = rows.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [rows[i], rows[j]] = [rows[j], rows[i]];
+        }
+
+        // Re-attach in new order
+        for (const row of rows) tbody.appendChild(row);
+      }
+
+      /* Shuffle every table inside every details block independently */
+      function shuffleAllTablesInDetails() {
+        const detailsBlocks = document.querySelectorAll("details");
+        detailsBlocks.forEach((det) => {
+          det.querySelectorAll("table").forEach((tbl) => {
+            shuffleRowsInTable(tbl);
+          });
+        });
+      }
+
+      /* Wire up button to shuffle all tables per details block without affecting page load order */
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("shuffleAllTables");
+        if (btn) {
+          btn.addEventListener("click", () => {
+            shuffleAllTablesInDetails();
+          });
+        }
+
+        // Add keyboard shortcut: press 'Z' to shuffle
+        document.addEventListener("keydown", (event) => {
+          // Use 'z' or 'Z'
+          if (event.key.toLowerCase() === "z") {
+            shuffleAllTablesInDetails();
+            // Prevent default to avoid interfering with page shortcuts
+            event.preventDefault();
+          }
+        });
+      });
     </script>
   </body>
 </html>
