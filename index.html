@@ -2903,7 +2903,14 @@
             <tr>
               <td><strong>Teplizumab</strong></td>
               <td>Prevention of Diabetes 1</td>
-              <td>Indivudals with high risk for type 1 diabetes</td>
+              <td>
+                <li>Indivudals with high risk for type 1 diabetes</li>
+                <li>Individuals >= 8 YO at high risk of type 1 diabetes</li>
+                <li>
+                  Two positive β cell autoantibodies and impaired glucose
+                  tolerance
+                </li>
+              </td>
               <td>
                 <li>
                   CD3 activates T cells and hence prevents β-cell distruction
@@ -3221,6 +3228,77 @@
           </tbody>
         </table>
       </details>
+      <br />
+      <details>
+        <summary>Lecture 11: Hepatotoxicity</summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Category</th>
+              <th>Indication</th>
+              <th>Mechanism of Action (MOA)</th>
+              <th>Adverse Effects / Toxicity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Acetaminophen</strong></td>
+              <td>Analgesic / Antipyretic</td>
+              <td>Pain and fever</td>
+              <td>
+                Saturated metabolic pathways lead to toxic metabolite NAPQI
+              </td>
+              <td>Hepatotoxicity (liver necrosis/failure)</td>
+            </tr>
+            <tr>
+              <td><strong>Disulfiram</strong></td>
+              <td>Alcohol Deterrent</td>
+              <td>AUD Management</td>
+              <td>Inhibitor of acetaldehyde dehydrogenase</td>
+              <td>
+                Nausea, flushing, vomiting, headache (when alcohol is consumed)
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Naltrexone</strong></td>
+              <td>Opioid Receptor Antagonist</td>
+              <td>Alcohol Cessation (AUD)</td>
+              <td>
+                <strong>Blocks the euphoric effect</strong> of alcohol by acting
+                as an opioid receptor antagonist
+              </td>
+              <td>
+                <strong>Diminished opioid activity</strong>: Prescribing opioids
+                to patients on naltrexone will be ineffective
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Varenicline</strong></td>
+              <td>Smoking Cessation Aid</td>
+              <td>Nicotine Use Disorder</td>
+              <td>Nicotine receptor partial agonist</td>
+              <td>Dysgeusia (distorted taste) and xerostomia</td>
+            </tr>
+            <tr>
+              <td><strong>N-acetylcysteine</strong></td>
+              <td>Antidote</td>
+              <td>Acetaminophen toxicity</td>
+              <td>Replenishes glutathione stores to neutralize NAPQI</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td><strong>Fomepizole</strong></td>
+              <td>Antidote</td>
+              <td>Methanol toxicity</td>
+              <td>
+                Inhibits alcohol dehydrogenase (prevents methanol oxidation)
+              </td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
     </div>
 
     <style>
@@ -3357,7 +3435,7 @@
       // === PASSWORD CHECK (unchanged) ===
       function checkPassword() {
         const enteredPassword = document.getElementById("password").value;
-        const correctPassword = "raymond";
+        const correctPassword = "";
         if (enteredPassword === correctPassword) {
           document.getElementById("content").style.display = "block";
           document.querySelector("h2").style.display = "none";
